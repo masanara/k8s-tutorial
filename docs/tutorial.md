@@ -2347,10 +2347,179 @@ namespace "myns" deleted
 
 # OpenShift固有の注意点
 
-- OpenShift環境では、kubectlを拡張した```oc```コマンドが利用される。実体は同じバイナリであり、kubectlはocコマンドに対するシンボリックリンクとして設定されている。
+## minishift
 
-- OpenShiftではIngressではなくRouterが利用される。
+OpenShiftを試す場合、minikubeと似た[minishift](https://github.com/minishift/minishift)を利用することが可能。デフォルトでVirtualBoxを利用しないため、起動時は以下のオプションが必要。
 
-- デフォルトでProjectによる隔離が行われており、Projectはネームスペースにより実装されている。一般ユーザーは自身が所属するProject(Namespace)を切り替えて、各Project内でのみリソースの作成が可能。
-- OpenShiftを試す場合、[minishift](https://github.com/minishift/minishift)を利用することが可能。
+```bash
+minishift start --vm-driver virtualbox
+```
+
+デフォルトで利用するVMのリソースは2vCPU/4GB RAMなので注意。(minikubeは2vCPU/2GB RAM)
+
+起動後、contextやProjectが生成され、```~/.kube/config```が自動的に生成される。
+
+```bash
+Creating initial project "myproject" ...
+Server Information ...
+OpenShift server started.
+
+The server is accessible via web console at:
+    https://192.168.99.100:8443/console
+
+You are logged in as:
+    User:     developer
+    Password: <any value>
+
+To login as administrator:
+    oc login -u system:admin
+```
+
+## kubectlとocコマンド
+
+OpenShift環境では```kubectl```を拡張した```oc```コマンドが利用される。ダウンロードは[ここ](https://github.com/openshift/origin/releases)から可能。
+
+minishiftを利用する場合、```minishift oc-env```でocのpathが出力される。
+
+## ProjectとNamespace
+
+OpenShift上ではProjectリソースで各ユーザーが利用する環境を隔離しているが、Projectはkubernetes上のnamespaceを利用している。
+
+```bash
+oc get project
+NAME                            DISPLAY NAME   STATUS
+default                                        Active
+kube-dns                                       Active
+kube-proxy                                     Active
+kube-public                                    Active
+kube-system                                    Active
+myproject                       My Project     Active
+openshift                                      Active
+openshift-apiserver                            Active
+openshift-controller-manager                   Active
+openshift-core-operators                       Active
+openshift-infra                                Active
+openshift-node                                 Active
+openshift-service-cert-signer                  Active
+openshift-web-console                          Active
+
+kubectl get ns
+NAME                            STATUS   AGE
+default                         Active   5h
+kube-dns                        Active   5h
+kube-proxy                      Active   5h
+kube-public                     Active   5h
+kube-system                     Active   5h
+myproject                       Active   5h
+openshift                       Active   5h
+openshift-apiserver             Active   5h
+openshift-controller-manager    Active   5h
+openshift-core-operators        Active   5h
+openshift-infra                 Active   5h
+openshift-node                  Active   5h
+openshift-service-cert-signer   Active   5h
+openshift-web-console           Active   5h
+```
+
+## OpenShiftへのログイン
+
+kubernetesではcontextを作成してkubernetesクラスターに接続するが、OpenShiftでは```oc login```コマンドにより、認証を経てkubernetes contextが自動的に生成・選択される仕組みとなっている。また、ログイン時に自動的にユーザーが割り当てられたProjectが選択される。
+
+```bash
+oc login
+Server [https://localhost:8443]: https://192.168.99.100:8443
+The server uses a certificate signed by an unknown authority.
+You can bypass the certificate check, but any data you send to the server could be intercepted by others.
+Use insecure connections? (y/n): y
+
+Authentication required for https://192.168.99.100:8443 (openshift)
+Username: developer
+Password:
+Login successfull.
+
+You have access to the following projects and can switch between them with 'oc project <projectname>':
+
+  * myproject
+    project1
+
+Using project "myproject".
+Welcome! See 'oc help' to get started.
+```
+
+ログインが成功すると```.kube/config```にContextが作成され、次回から認証不要となる。
+
+```bash
+oc config get-contexts
+CURRENT   NAME                                      CLUSTER               AUTHINFO                        NAMESPACE
+*         myproject/192-168-99-100:8443/developer   192-168-99-100:8443   developer/192-168-99-100:8443   myproject
+```
+
+## Podの起動
+
+OpenShiftでは権限が厳しく設定されているため、コンテナ内でrootユーザー権限のプロセスを起動しようとすると、Podの起動に失敗する。以下のように```CrashLoopBackOff```状態となる。
+
+```bash
+oc apply -f nginx/nginx.yaml
+deployment.extensions/nginx created
+service/nginx created
+
+oc get pods,svc
+NAME                         READY     STATUS             RESTARTS   AGE
+pod/nginx-59fd9d9476-5rwkg   0/1       CrashLoopBackOff   1          10s
+pod/nginx-59fd9d9476-jfk9s   0/1       CrashLoopBackOff   1          10s
+pod/nginx-59fd9d9476-qdhxq   0/1       CrashLoopBackOff   1          10s
+
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/nginx   ClusterIP   172.30.34.184   <none>        80/TCP    10s
+```
+
+本来はrootユーザーでプロセスを起動すべきではないが、多くのコンテナイメージがrootユーザーによるプロセスの起動を想定しており、以下のコマンドにより、この設定を緩和する事が可能。
+
+```bash
+oc adm policy add-scc-to-group anyuid system:authenticated
+scc "anyuid" added to groups: ["system:authenticated"]
+```
+
+OpenShiftにログインするすべてのユーザー(```system:authenticated```)のscc(Security Context Constraints)に対して、```anyuid```
+
+```bash
+oc delete -f nginx/nginx.yaml
+deployment.extensions "nginx" deleted
+service "nginx" deleted
+
+oc apply -f nginx/nginx.yaml
+deployment.extensions/nginx created
+service/nginx created
+
+oc get pods,svc
+NAME                         READY     STATUS    RESTARTS   AGE
+pod/nginx-59fd9d9476-492ls   1/1       Running   0          5m
+pod/nginx-59fd9d9476-7s529   1/1       Running   0          5m
+pod/nginx-59fd9d9476-bn9qj   1/1       Running   0          5m
+
+NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/nginx   ClusterIP   172.30.152.0   <none>        80/TCP    5m
+```
+
+## OpenShift Router
+
+OpenShiftでServiceを外部公開する標準の機能はIngressではなくRouterが利用される。```oc expose```でSerivceを指定して公開する事が可能。
+
+```bash
+oc expose service nginx
+route.route.openshift.io/nginx exposed
+
+oc get route
+NAME      HOST/PORT                               PATH      SERVICES   PORT      TERMINATION   WILDCARD
+nginx     nginx-myproject.192.168.99.100.nip.io             nginx      80                      None
+```
+
+ブラウザで```http://nginx-myproject.192.168.99.100.nip.io```にアクセスするとnginxが表示される。
+
+削除する場合は、```oc delete route```で削除可能。
+
+```bash
+oc delete route nginx
+route.route.openshift.io "nginx" deleted
+```
 
