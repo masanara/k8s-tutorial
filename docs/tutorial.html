@@ -1,0 +1,1815 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>tuttorial</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n3"><a class="md-toc-inner" style="" href="#header-n3">はじめに</a></span><span class="md-toc-item md-toc-h1" data-ref="n9"><a class="md-toc-inner" style="" href="#header-n9">環境の準備 (ubuntuの場合)</a></span><span class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" style="" href="#header-n10">minikube CLIのダウンロード</a></span><span class="md-toc-item md-toc-h2" data-ref="n13"><a class="md-toc-inner" style="" href="#header-n13">kubectlのインストール</a></span><span class="md-toc-item md-toc-h2" data-ref="n16"><a class="md-toc-inner" style="" href="#header-n16">docker cliのインストール</a></span><span class="md-toc-item md-toc-h2" data-ref="n19"><a class="md-toc-inner" style="" href="#header-n19">VirtualBoxのインストール</a></span><span class="md-toc-item md-toc-h2" data-ref="n22"><a class="md-toc-inner" style="" href="#header-n22">minikubeの起動</a></span><span class="md-toc-item md-toc-h2" data-ref="n25"><a class="md-toc-inner" style="" href="#header-n25">minikubeのIPアドレス確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n28"><a class="md-toc-inner" style="" href="#header-n28">Addonの有効化</a></span><span class="md-toc-item md-toc-h2" data-ref="n33"><a class="md-toc-inner" style="" href="#header-n33">Docker環境変数の設定</a></span><span class="md-toc-item md-toc-h1" data-ref="n40"><a class="md-toc-inner" style="" href="#header-n40">コンテナイメージの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n42"><a class="md-toc-inner" style="" href="#header-n42">作成準備</a></span><span class="md-toc-item md-toc-h3" data-ref="n43"><a class="md-toc-inner" style="" href="#header-n43">Dockerfileの作成</a></span><span class="md-toc-item md-toc-h3" data-ref="n57"><a class="md-toc-inner" style="" href="#header-n57">nginx.confの設定例</a></span><span class="md-toc-item md-toc-h3" data-ref="n65"><a class="md-toc-inner" style="" href="#header-n65">index.htmlの例</a></span><span class="md-toc-item md-toc-h2" data-ref="n68"><a class="md-toc-inner" style="" href="#header-n68">docker buildコマンドによるイメージの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n71"><a class="md-toc-inner" style="" href="#header-n71">コンテナの実行</a></span><span class="md-toc-item md-toc-h3" data-ref="n72"><a class="md-toc-inner" style="" href="#header-n72">docker runコマンドによるコンテナの起動</a></span><span class="md-toc-item md-toc-h3" data-ref="n75"><a class="md-toc-inner" style="" href="#header-n75">docker psコマンドによるコンテナの起動確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n78"><a class="md-toc-inner" style="" href="#header-n78">curlコマンドによりコンテナの起動を確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n81"><a class="md-toc-inner" style="" href="#header-n81">(オプション) docker hubへのコンテナイメージの登録</a></span><span class="md-toc-item md-toc-h3" data-ref="n82"><a class="md-toc-inner" style="" href="#header-n82">docker loginによりDocker Hubにログイン</a></span><span class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" style="" href="#header-n86">コンテナイメージのタグ付</a></span><span class="md-toc-item md-toc-h3" data-ref="n89"><a class="md-toc-inner" style="" href="#header-n89">タグ付けされたコンテナイメージの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n91"><a class="md-toc-inner" style="" href="#header-n91">コンテナイメージのプッシュ</a></span><span class="md-toc-item md-toc-h1" data-ref="n95"><a class="md-toc-inner" style="" href="#header-n95">kubectlコマンドの基本</a></span><span class="md-toc-item md-toc-h2" data-ref="n96"><a class="md-toc-inner" style="" href="#header-n96">クラスターへの接続</a></span><span class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" style="" href="#header-n99">kubectlの設定ファイル</a></span><span class="md-toc-item md-toc-h3" data-ref="n102"><a class="md-toc-inner" style="" href="#header-n102">Contextの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n105"><a class="md-toc-inner" style="" href="#header-n105">Contextの切り替え</a></span><span class="md-toc-item md-toc-h2" data-ref="n108"><a class="md-toc-inner" style="" href="#header-n108">クラスター上のリソースの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n110"><a class="md-toc-inner" style="" href="#header-n110">kubernetes nodeの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" style="" href="#header-n114">リソース個別の確認</a></span><span class="md-toc-item md-toc-h1" data-ref="n123"><a class="md-toc-inner" style="" href="#header-n123">kubernetes上でのコンテナの実行</a></span><span class="md-toc-item md-toc-h2" data-ref="n124"><a class="md-toc-inner" style="" href="#header-n124">CLIによるDeploymentの作成</a></span><span class="md-toc-item md-toc-h3" data-ref="n125"><a class="md-toc-inner" style="" href="#header-n125">deploymentの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n128"><a class="md-toc-inner" style="" href="#header-n128">kubectl runコマンドによるdeploymentの作成</a></span><span class="md-toc-item md-toc-h3" data-ref="n134"><a class="md-toc-inner" style="" href="#header-n134">作成されたリソースの確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n139"><a class="md-toc-inner" style="" href="#header-n139">ServiceによるPodの外部公開</a></span><span class="md-toc-item md-toc-h3" data-ref="n140"><a class="md-toc-inner" style="" href="#header-n140">kubectl exposeによりdeploymentをNodePort Serviceとして公開</a></span><span class="md-toc-item md-toc-h3" data-ref="n152"><a class="md-toc-inner" style="" href="#header-n152">Serviceの確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n155"><a class="md-toc-inner" style="" href="#header-n155">Serviceへのアクセス確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n158"><a class="md-toc-inner" style="" href="#header-n158">Podのスケールアウト</a></span><span class="md-toc-item md-toc-h3" data-ref="n160"><a class="md-toc-inner" style="" href="#header-n160">Replicaset状態の確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n163"><a class="md-toc-inner" style="" href="#header-n163">Replica数の変更</a></span><span class="md-toc-item md-toc-h3" data-ref="n166"><a class="md-toc-inner" style="" href="#header-n166">ReplicasetとPod数の確認</a></span><span class="md-toc-item md-toc-h1" data-ref="n171"><a class="md-toc-inner" style="" href="#header-n171">Ingressによるサービスの公開</a></span><span class="md-toc-item md-toc-h2" data-ref="n173"><a class="md-toc-inner" style="" href="#header-n173">ClusterIP Serviceの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n178"><a class="md-toc-inner" style="" href="#header-n178">Ingressリソースの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n186"><a class="md-toc-inner" style="" href="#header-n186">Ingressへのアクセス確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n189"><a class="md-toc-inner" style="" href="#header-n189">作成したリソースの削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n194"><a class="md-toc-inner" style="" href="#header-n194">運用に利用するコマンド</a></span><span class="md-toc-item md-toc-h2" data-ref="n195"><a class="md-toc-inner" style="" href="#header-n195">コンテナ内のlog確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n198"><a class="md-toc-inner" style="" href="#header-n198">コンテナ内のシェル実行</a></span><span class="md-toc-item md-toc-h2" data-ref="n201"><a class="md-toc-inner" style="" href="#header-n201">リソース詳細の確認</a></span><span class="md-toc-item md-toc-h1" data-ref="n206"><a class="md-toc-inner" style="" href="#header-n206">YAMLファイルによるリソースの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n230"><a class="md-toc-inner" style="" href="#header-n230">リソースの定義方法</a></span><span class="md-toc-item md-toc-h2" data-ref="n233"><a class="md-toc-inner" style="" href="#header-n233">YAMLファイルによるリソースの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n236"><a class="md-toc-inner" style="" href="#header-n236">作成されたリソースの確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n241"><a class="md-toc-inner" style="" href="#header-n241">Ingressに対するアクセスの確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n243"><a class="md-toc-inner" style="" href="#header-n243">YAMLファイルによるリソースの削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n248"><a class="md-toc-inner" style="" href="#header-n248">Podの作成例</a></span><span class="md-toc-item md-toc-h2" data-ref="n251"><a class="md-toc-inner" style="" href="#header-n251">複数コンテナで構成されるPodの定義方法</a></span><span class="md-toc-item md-toc-h2" data-ref="n261"><a class="md-toc-inner" style="" href="#header-n261">複数コンテナで構成されるPodの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n266"><a class="md-toc-inner" style="" href="#header-n266">Pod内の確認</a></span><span class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" style="" href="#header-n268">alpine-linuxコンテナへの接続</a></span><span class="md-toc-item md-toc-h3" data-ref="n271"><a class="md-toc-inner" style="" href="#header-n271">nginxコンテナへの接続</a></span><span class="md-toc-item md-toc-h1" data-ref="n278"><a class="md-toc-inner" style="" href="#header-n278">Persistent Volume</a></span><span class="md-toc-item md-toc-h2" data-ref="n281"><a class="md-toc-inner" style="" href="#header-n281">StorageClassの定義</a></span><span class="md-toc-item md-toc-h3" data-ref="n283"><a class="md-toc-inner" style="" href="#header-n283">minikubeの場合</a></span><span class="md-toc-item md-toc-h3" data-ref="n285"><a class="md-toc-inner" style="" href="#header-n285">OpenShift(GlusterFS)の場合</a></span><span class="md-toc-item md-toc-h2" data-ref="n287"><a class="md-toc-inner" style="" href="#header-n287">Persisten Volume (PV)の作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n291"><a class="md-toc-inner" style="" href="#header-n291">PVC(Persistent Volume Claim)の作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n295"><a class="md-toc-inner" style="" href="#header-n295">Podへのマウント確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n300"><a class="md-toc-inner" style="" href="#header-n300">Podに接続したPVにファイルを作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n303"><a class="md-toc-inner" style="" href="#header-n303">Podの削除</a></span><span class="md-toc-item md-toc-h2" data-ref="n306"><a class="md-toc-inner" style="" href="#header-n306">Podの再作成とPV内に作成したファイルの残存確認</a></span><span class="md-toc-item md-toc-h1" data-ref="n311"><a class="md-toc-inner" style="" href="#header-n311">Persistent VolumeのDynamic Provisoning</a></span><span class="md-toc-item md-toc-h2" data-ref="n317"><a class="md-toc-inner" style="" href="#header-n317">Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n320"><a class="md-toc-inner" style="" href="#header-n320">Persistent Volumeの利用</a></span><span class="md-toc-item md-toc-h2" data-ref="n330"><a class="md-toc-inner" style="" href="#header-n330">Podへのアクセス確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n333"><a class="md-toc-inner" style="" href="#header-n333">Podの削除とデータの永続性</a></span><span class="md-toc-item md-toc-h2" data-ref="n338"><a class="md-toc-inner" style="" href="#header-n338">環境の削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n343"><a class="md-toc-inner" style="" href="#header-n343">Config Mapの利用</a></span><span class="md-toc-item md-toc-h2" data-ref="n345"><a class="md-toc-inner" style="" href="#header-n345">Config Mapの構成</a></span><span class="md-toc-item md-toc-h2" data-ref="n349"><a class="md-toc-inner" style="" href="#header-n349">Config Mapを利用したPodの起動</a></span><span class="md-toc-item md-toc-h2" data-ref="n352"><a class="md-toc-inner" style="" href="#header-n352">Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n355"><a class="md-toc-inner" style="" href="#header-n355">Config Mapが反映されていることの確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n360"><a class="md-toc-inner" style="" href="#header-n360">Deploymentの削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n365"><a class="md-toc-inner" style="" href="#header-n365">Secretの利用</a></span><span class="md-toc-item md-toc-h2" data-ref="n367"><a class="md-toc-inner" style="" href="#header-n367">Secretの作成</a></span><span class="md-toc-item md-toc-h3" data-ref="n370"><a class="md-toc-inner" style="" href="#header-n370">base64エンコードの方法</a></span><span class="md-toc-item md-toc-h3" data-ref="n372"><a class="md-toc-inner" style="" href="#header-n372">Secretリソースの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n374"><a class="md-toc-inner" style="" href="#header-n374">Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n381"><a class="md-toc-inner" style="" href="#header-n381">Deploymentの削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n386"><a class="md-toc-inner" style="" href="#header-n386">MySQL Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n389"><a class="md-toc-inner" style="" href="#header-n389">MySQL Deploymentの作成と確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n394"><a class="md-toc-inner" style="" href="#header-n394">MySQL Serviceの作成</a></span><span class="md-toc-item md-toc-h1" data-ref="n403"><a class="md-toc-inner" style="" href="#header-n403">Wordpress Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n417"><a class="md-toc-inner" style="" href="#header-n417">Wordpress Deploymentの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n420"><a class="md-toc-inner" style="" href="#header-n420">Wordpresss Serviceの作成</a></span><span class="md-toc-item md-toc-h1" data-ref="n427"><a class="md-toc-inner" style="" href="#header-n427">IngressによるWordpressの公開</a></span><span class="md-toc-item md-toc-h3" data-ref="n432"><a class="md-toc-inner" style="" href="#header-n432">Wordpress動作確認</a></span><span class="md-toc-item md-toc-h1" data-ref="n439"><a class="md-toc-inner" style="" href="#header-n439">ローリングアップデートによるバージョン変更</a></span><span class="md-toc-item md-toc-h2" data-ref="n441"><a class="md-toc-inner" style="" href="#header-n441">コンテナイメージの更新</a></span><span class="md-toc-item md-toc-h2" data-ref="n444"><a class="md-toc-inner" style="" href="#header-n444">アップグレード前の状態確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n447"><a class="md-toc-inner" style="" href="#header-n447">アップグレードの実行</a></span><span class="md-toc-item md-toc-h2" data-ref="n454"><a class="md-toc-inner" style="" href="#header-n454">Wordpresssアップグレードの確認</a></span><span class="md-toc-item md-toc-h2" data-ref="n459"><a class="md-toc-inner" style="" href="#header-n459">環境の削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n464"><a class="md-toc-inner" style="" href="#header-n464">Namespace</a></span><span class="md-toc-item md-toc-h2" data-ref="n466"><a class="md-toc-inner" style="" href="#header-n466">デフォルトのネームスペース</a></span><span class="md-toc-item md-toc-h2" data-ref="n469"><a class="md-toc-inner" style="" href="#header-n469">Namespaceの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n472"><a class="md-toc-inner" style="" href="#header-n472">Namespaceへのリソースの作成</a></span><span class="md-toc-item md-toc-h2" data-ref="n481"><a class="md-toc-inner" style="" href="#header-n481">リソースの削除</a></span><span class="md-toc-item md-toc-h1" data-ref="n486"><a class="md-toc-inner" style="" href="#header-n486">OpenShift固有の注意点</a></span></p></div><hr /><h1><a name='header-n3' class='md-header-anchor '></a>はじめに</h1><p>このチュートリアルのゴールはkubernetesの各種機能をつかって、Wordpressをkubernetesクラスター上で起動し外部からアクセス可能にすることである。 </p><p>利用する各種ファイルは<a href='https://github.com/masanara/k8s-tutorial'>ここ</a>。以下、説明中の各種コマンドはこのリポジトリディレクトリ内から実行することを想定している。</p><p>OpenShiftではIngressリソースの代わりに、Routerリソースが利用されるため注意が必要。</p><p>&nbsp;</p><hr /><h1><a name='header-n9' class='md-header-anchor '></a>環境の準備 (ubuntuの場合)</h1><h2><a name='header-n10' class='md-header-anchor '></a>minikube CLIのダウンロード</h2><p><a href='https://github.com/kubernetes/minikube'>minikube</a>はkubernetresクラスターをmacOS/Linux/Windows上で簡単に起動するための環境。テストやPOC向けに利用することが可能。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.35.0/minikube-linux-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo cp minikube /usr/local/bin/ &amp;&amp; rm minikube</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># minikube version</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube version: v0.35.0</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><h2><a name='header-n13' class='md-header-anchor '></a>kubectlのインストール</h2><p>kubernetesクラスターを管理するためのkubectlをインストールする。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> apt-get update &amp;&amp; <span class="cm-builtin">sudo</span> apt-get install <span class="cm-attribute">-y</span> apt-transport-https</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">curl</span> <span class="cm-attribute">-s</span> https://packages.cloud.google.com/apt/doc/apt-key.gpg | <span class="cm-builtin">sudo</span> apt-key add <span class="cm-attribute">-</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> <span class="cm-builtin">sh</span> <span class="cm-attribute">-c</span> <span class="cm-string">'cat &lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">deb http://apt.kubernetes.io/ kubernetes-xenial main</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">EOF<span class="cm-string">'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">apt-get update &amp;&amp; apt-get install <span class="cm-attribute">-y</span> kubectl</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre><h2><a name='header-n16' class='md-header-anchor '></a>docker cliのインストール</h2><p>dockerのクライアントCLIをインストールする。docker daemonはminikube VM内で起動するdockerを利用するためインストール不要。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">apt-get update &amp;&amp; apt-get install apt-transport-https ca-certificates <span class="cm-builtin">curl</span> gnupg-agent software-properties-common</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">curl</span> <span class="cm-attribute">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="cm-builtin">sudo</span> apt-key add <span class="cm-attribute">-</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">add-apt-repository \</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp; </span><span class="cm-quote">$(lsb_release -cs)</span><span class="cm-string"> \</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp; stable"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">apt-get update &amp;&amp; apt-get install docker-ce-cli</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 176px;"></div><div class="CodeMirror-gutters" style="display: none; height: 176px;"></div></div></div></pre><h2><a name='header-n19' class='md-header-anchor '></a>VirtualBoxのインストール</h2><p>minikubeをVMとして起動するためのVirtualBoxをインストールする。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">apt-get install virtualbox</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h2><a name='header-n22' class='md-header-anchor '></a>minikubeの起動</h2><p>VMをスタートしてkubernetes環境が構築される。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube <span class="cm-builtin">start</span> <span class="cm-attribute">--memory</span> <span class="cm-number">4096</span> <span class="cm-attribute">--cpus</span> <span class="cm-number">8</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h2><a name='header-n25' class='md-header-anchor '></a>minikubeのIPアドレス確認</h2><p>minikube VMに割り当てられているIPアドレスを確認する。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube ip</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">192</span>.168.99.100</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 44px;"></div><div class="CodeMirror-gutters" style="display: none; height: 44px;"></div></div></div></pre><h2><a name='header-n28' class='md-header-anchor '></a>Addonの有効化</h2><p>Ingress, storage-provisionor, storage-provisioner-glusterを有効化する</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube addons enable ingress</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> &nbsp; ingress was successfully enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube addons enable storage-provisioner</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> &nbsp; storage-provisioner was successfully enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube addons enable storage-provisioner-gluster</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> &nbsp; storage-provisioner-gluster was successfully enabled</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube config view</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> ingress: <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> storage-provisioner: <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-attribute">-</span> storage-provisioner-gluster: <span class="cm-atom">true</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 286px;"></div><div class="CodeMirror-gutters" style="display: none; height: 286px;"></div></div></div></pre><blockquote><p>一度有効化したminikubeのaddonを、無効化して再度有効化した場合、pvが作成できない場合がある。作成できなくなった場合は、<code>minikube delete</code>で一度環境を削除して再度<code>minikube start</code>すると正常に機能する&gt;場合がある。</p></blockquote><h2><a name='header-n33' class='md-header-anchor '></a>Docker環境変数の設定</h2><p>VM内で起動するdockerをホストから利用できるよう環境変数を設定する。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">minikube docker-env &gt; ~/.bashrc</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">source</span> ~/.bashrc</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">env | <span class="cm-builtin">grep</span> DOCKER</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">DOCKER_TLS_VERIFY</span><span class="cm-operator">=</span><span class="cm-string">"1"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">DOCKER_HOST</span><span class="cm-operator">=</span><span class="cm-string">"tcp://192.168.99.100:2376"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">DOCKER_CERT_PATH</span><span class="cm-operator">=</span><span class="cm-string">"/Users/masanara/.minikube/certs"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">DOCKER_API_VERSION</span><span class="cm-operator">=</span><span class="cm-string">"1.35"</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 176px;"></div><div class="CodeMirror-gutters" style="display: none; height: 176px;"></div></div></div></pre><p>VM内のdockerデーモンに接続可能なことを確認する</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">docker version</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Client: Docker Engine <span class="cm-attribute">-</span> Community</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Version: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">18</span>.09.3</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> API version: &nbsp; &nbsp; &nbsp; <span class="cm-number">1</span>.35</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Go version: &nbsp; &nbsp; &nbsp;  go1.10.8</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Git commit: &nbsp; &nbsp; &nbsp;  774a1f4</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Built: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Thu Feb <span class="cm-number">29</span> <span class="cm-number">06</span>:40:58 <span class="cm-number">2019</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> OS/Arch: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linux/amd64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Experimental: &nbsp; &nbsp; &nbsp;<span class="cm-atom">false</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Server:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Engine:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Version: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">18</span>.06.2-ce</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  API version: &nbsp; &nbsp; &nbsp;<span class="cm-number">1</span>.38 (minimum version <span class="cm-number">1</span>.12)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Go version: &nbsp; &nbsp; &nbsp; go1.10.3</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Git commit: &nbsp; &nbsp; &nbsp; 6d37f41</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Built: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Sun Feb <span class="cm-number">10</span> <span class="cm-number">03</span>:51:58 <span class="cm-number">2019</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  OS/Arch: &nbsp; &nbsp; &nbsp; &nbsp;  linux/amd64</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  Experimental: &nbsp; &nbsp; <span class="cm-atom">false</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 418px;"></div><div class="CodeMirror-gutters" style="display: none; height: 418px;"></div></div></div></pre><p>&nbsp;</p><hr /><h1><a name='header-n40' class='md-header-anchor '></a>コンテナイメージの作成</h1><p>コンテナイメージはDockerfileを設計書として、<code>docker build</code>コマンドにより作成することが可能。</p><h2><a name='header-n42' class='md-header-anchor '></a>作成準備</h2><h3><a name='header-n43' class='md-header-anchor '></a>Dockerfileの作成</h3><ul><li><code>FROM alpine:3.29</code>とすることで、alpine linuxのバージョン3.9をベースとしたイメージを作成する。</li><li><code>RUN</code>によりコンテ内で実行するコマンドを指定する。</li><li><code>COPY</code>によりファイルをコンテナ内にコピーする。</li><li><code>CMD</code>によりコンテナが起動した際に実行されるコマンドを指定する。</li></ul><p>Dockerfileで利用可能なオプションの詳細は<a href='https://docs.docker.com/engine/reference/builder/'>ここ</a>を参照。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="dockerfile"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="dockerfile"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">FROM</span> alpine:3.9</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">RUN</span> apk --update add nginx &amp;&amp; mkdir /var/www/html</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">COPY</span> nginx.conf /etc/nginx/nginx.conf</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">COPY</span> index.html /var/www/html/index.html</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">EXPOSE</span> 80</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">CMD</span> ["nginx","-g","daemon off; pid /run/nginx.pid;"]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre><p>上記Dockerfileにより以下のようなイメージが作成される。各行がコンテナイメージのレイヤーとして作成される。</p><p><img src='./images/container_img.png' alt='container_img' referrerPolicy='no-referrer' /></p><h3><a name='header-n57' class='md-header-anchor '></a>nginx.confの設定例</h3><p>コンテナ内にコピーするnginxの設定ファイルを用意する。設定ファイルのポイントは以下の2点。</p><ul><li>エラーログ、アクセスログをそれぞれ標準エラー出力(/dev/stderr)、標準出力(/dev/stdout)に出力するよう指定。</li><li>/var/www/htmlディレクトリ内のindex.htmlをディレクトリインデックスとして指定。</li></ul><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="" style="page-break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">user nginx;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">worker_processes auto;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pcre_jit on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">error_log /dev/stderr warn;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">include /etc/nginx/modules/*.conf;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">events {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>worker_connections 1024;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">http {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>include /etc/nginx/mime.types;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>default_type application/octet-stream;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>server_tokens off;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>client_max_body_size 1m;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>keepalive_timeout 65;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>sendfile on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>tcp_nodelay on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>ssl_prefer_server_ciphers on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>ssl_session_cache shared:SSL:2m;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>gzip_vary on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>log_format main '$remote_addr - $remote_user [$time_local] "$request" '</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>'$status $body_bytes_sent "$http_referer" '</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>'"$http_user_agent" "$http_x_forwarded_for"';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>access_log /dev/stdout main;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  server {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  listen 80 default_server;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  server_name _;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  sendfile off;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  root /var/www/html;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  index index.html;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  location / {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  try_files $uri $uri /index.html;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 748px;"></div><div class="CodeMirror-gutters" style="display: none; height: 748px;"></div></div></div></pre><h3><a name='header-n65' class='md-header-anchor '></a>index.htmlの例</h3><p>nginxコンテナがWebサーバーとして提供するコンテンツとして、任意のhtmlファイルを作成。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>Docker TEST<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h2><a name='header-n68' class='md-header-anchor '></a>docker buildコマンドによるイメージの作成</h2><p>Dockerfile, nginx.conf, index.htmlを同じディレクトリに置き、該当のディレクトリ内で<code>docker build</code>コマンドを実行する。<code>-t</code>オプションでタグ名(イメージ名)を指定する。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">docker build <span class="cm-attribute">-t</span> nginx:alpine .</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h2><a name='header-n71' class='md-header-anchor '></a>コンテナの実行</h2><h3><a name='header-n72' class='md-header-anchor '></a>docker runコマンドによるコンテナの起動</h3><p><code>docker run</code>コマンドによりコンテナイメージをしてコンテナの起動が可能。<code>-p</code>オプションによりコンテナ実行ホストのポートにコンテナのポートをマッピングして、外部公開可能。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">docker run <span class="cm-attribute">-d</span> <span class="cm-attribute">-p</span> <span class="cm-number">8080</span>:80 nginx:alpine</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><h3><a name='header-n75' class='md-header-anchor '></a>docker psコマンドによるコンテナの起動確認</h3><p>起動しているコンテナは<code>docker ps</code>コマンドにより確認可能。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">docker <span class="cm-builtin">ps</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">CONTAINER ID &nbsp; &nbsp; &nbsp;  IMAGE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; COMMAND &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CREATED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PORTS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  NAMES</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">bb6f01dba077 &nbsp; &nbsp; &nbsp;  nginx:alpine &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"nginx -g 'daemon of…"</span> &nbsp; <span class="cm-number">7</span> seconds ago &nbsp; &nbsp; &nbsp; Up <span class="cm-number">6</span> seconds &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span>.0.0.0:8080-&gt;80/tcp &nbsp; relaxed_austin</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre><h3><a name='header-n78' class='md-header-anchor '></a>curlコマンドによりコンテナの起動を確認</h3><p>curlコマンドによりlocalhostの8080番ポートに接続し、nginxが起動していることを確認する。</p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">curl</span> localhost:8080</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;html&gt;&lt;body&gt;&lt;h1&gt;Docker TEST&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre><h2><a name='header-n81' class='md-header-anchor '></a>(オプション) docker hubへのコンテナイメージの登録</h2><h3><a name='header-n82' class='md-header-anchor '></a>docker loginによりDocker Hubにログイン</h3><p>作成したコンテナイメージはDocker HubなどのRegistryに登録可能。Docker Hubにコンテナイメージを登録する場合はアカウントの作成が必要。(<a href='https://hub.docker.com/signup'>https://hub.docker.com/signup</a>からアカウントの作成が必要。)</p><p>Docker Hubの他に、パブリッククラウドの提供する、Amazon ECR(<em>aws_account_id</em>.dkr.ecr.<em>region</em>.amazonaws.com)、Google Container Registry(GCR:gcr.io)、Azure Container Registory(ACR:azurecr.io)が利用可能。オンプレミスにRegistryを構築することでプライベートなレジストリを利用することも可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n85" mdtype="fences">docker login
+
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: username000
+Password: xxxxxxxx
+Login Succeeded
+</pre><h3><a name='header-n86' class='md-header-anchor '></a>コンテナイメージのタグ付</h3><p>docker hubにアップロードするために、コンテナイメージに新たなタグ付けをする。タグ名は[自身のDocker Hubのアカウント名]/nginx:alpineとすること。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n88" mdtype="fences">docker tag nginx:alpine username000/nginx:alpine
+</pre><h3><a name='header-n89' class='md-header-anchor '></a>タグ付けされたコンテナイメージの確認</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n90" mdtype="fences">docker images
+
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+nginx                          alpine              2e8ce637cbae        21 minutes ago      8.27MB
+username000/nginx              alpine              2e8ce637cbae        21 minutes ago      8.27MB
+</pre><h3><a name='header-n91' class='md-header-anchor '></a>コンテナイメージのプッシュ</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n92" mdtype="fences">docker push username000/nginx:alpine
+
+The push refers to repository [docker.io/username000/nginx]
+41c468a6a8fc: Pushed
+36f565774019: Pushed
+e1465c7bf8f8: Layer already exists
+503e53e365f3: Layer already exists
+alpine: digest: sha256:5bb7690c75f1b6fb217b951fc5152df9b77f9a74e92450f19d8226f382175684 size: 1154
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n95' class='md-header-anchor '></a>kubectlコマンドの基本</h1><h2><a name='header-n96' class='md-header-anchor '></a>クラスターへの接続</h2><p>kuberneteseクラスターの操作はkubectlコマンドにより実行する。kubectlコマンドはkubernetesクラスターのMasterに接続してリモートで操作を行うことが可能。</p><p><img src='./images/architecture.png' alt='architecture' referrerPolicy='no-referrer' /></p><h3><a name='header-n99' class='md-header-anchor '></a>kubectlの設定ファイル</h3><p><code>~/.kube/config</code>ファイルに接続先のkubernetes cluster情報や、接続に必要な認証情報が保存されている。接続に関する情報はcontextと呼ばれるオブジェクトで管理され、接続先・認証方法の組み合わせをパラメータとして持つ。複数のcontextをconfig内に定義可能。通常設定ファイルを記述する必要はなく、何らかの方法でconfigファイルが提供される。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n101" mdtype="fences" style="page-break-inside: unset;">apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://k8s-master1.example.com:8443
+  name: k8s-master1-example-com:8443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://k8s-master2.example.com:8443
+  name: k8s-master2-example-com:8443
+contexts:
+- context:
+    cluster: k8s-master1-example-com:8443
+    namespace: "my-namespace"
+    user: user01/k8s-master1-example-com:8443
+  name: my-namespace on master1
+- context:
+    cluster: k8s-master2-example-com:8443
+    namespace: "ns1"
+    user: user02/k8s-master2-example-com:8443
+  name: ns1 on master2
+current-context: ns1 on master2
+kind: Config
+preferences: {}
+users:
+- name: user01/k8s-master1-example-com:8443
+  user:
+    token: XXXXXXXXX
+- name: user02/k8s-master2-example-com:8443
+  user:
+    token: XXXXXXXXX
+</pre><h3><a name='header-n102' class='md-header-anchor '></a>Contextの確認</h3><p>接続先やnamespaceはContextとして定義されている。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n104" mdtype="fences">kubectl config get-contexts
+CURRENT   NAME                      CLUSTER                        AUTHINFO                              NAMESPACE
+          my-namespace on master1   k8s-master1-example-com:8443   user01/k8s-master1-example-com:8443   my-namespace
+*         ns1 on master2            k8s-master2-example-com:8443   user02/k8s-master2-example-com:8443   ns1
+</pre><h3><a name='header-n105' class='md-header-anchor '></a>Contextの切り替え</h3><p>contextを切り替えることで、kubectlの接続先を変更することが可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n107" mdtype="fences">kubectl config use-context 'my-namespace on master1'
+Switched to context "my-namespace on master1".
+
+kubectl config get-contexts
+CURRENT   NAME                      CLUSTER                        AUTHINFO                              NAMESPACE
+*         my-namespace on master1   k8s-master1-example-com:8443   user01/k8s-master1-example-com:8443   my-namespace
+          ns1 on master2            k8s-master2-example-com:8443   user02/k8s-master2-example-com:8443   ns1
+</pre><h2><a name='header-n108' class='md-header-anchor '></a>クラスター上のリソースの確認</h2><p><code>kubectl get 〜</code>で各種リソースの存在を確認可能。</p><h3><a name='header-n110' class='md-header-anchor '></a>kubernetes nodeの確認</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n111" mdtype="fences">kubectl get nodes
+NAME          STATUS   ROLES    AGE   VERSION
+k8s-node-01   Ready    &lt;none&gt;   26d   v1.12.4
+k8s-node-02   Ready    &lt;none&gt;   27d   v1.12.4
+k8s-node-03   Ready    &lt;none&gt;   27d   v1.12.4
+k8s-node-04   Ready    &lt;none&gt;   26d   v1.12.4
+k8s-node-05   Ready    &lt;none&gt;   27d   v1.12.4
+k8s-node-06   Ready    &lt;none&gt;   27d   v1.12.4
+k8s-node-07   Ready    &lt;none&gt;   26d   v1.12.4
+k8s-node-08   Ready    &lt;none&gt;   27d   v1.12.4
+</pre><p><code>-w o</code>オプションを利用すると詳細情報を確認可能</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n113" mdtype="fences">kubectl get nodes -o wide
+NAME          STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+k8s-node-01   Ready    &lt;none&gt;   26d   v1.12.4   172.10.0.12   172.10.0.12   Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-02   Ready    &lt;none&gt;   27d   v1.12.4   172.10.0.5    172.10.0.5    Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-03   Ready    &lt;none&gt;   27d   v1.12.4   172.10.0.10   172.10.0.10   Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-04   Ready    &lt;none&gt;   26d   v1.12.4   172.10.0.11   172.10.0.11   Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-05   Ready    &lt;none&gt;   27d   v1.12.4   172.10.0.9    172.10.0.9    Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-06   Ready    &lt;none&gt;   27d   v1.12.4   172.10.0.7    172.10.0.7    Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-07   Ready    &lt;none&gt;   26d   v1.12.4   172.10.0.6    172.10.0.6    Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+k8s-node-08   Ready    &lt;none&gt;   27d   v1.12.4   172.10.0.8    172.10.0.8    Ubuntu 16.04.5 LTS   4.15.0-43-generic   docker://18.6.1
+</pre><h3><a name='header-n114' class='md-header-anchor '></a>リソース個別の確認</h3><p><code>kubectl get 〜</code>で指定した各リソースの個別の情報を表示可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n116" mdtype="fences">kubectl get node k8s-node-01
+NAME          STATUS   ROLES    AGE   VERSION
+k8s-node-01   Ready    &lt;none&gt;   26d   v1.12.4
+</pre><p><code>-o json</code>オプションによりJSONフォーマットですべての情報を出力可能。(yamlオプションも利用可能)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="json" contenteditable="false" cid="n118" mdtype="fences">kubectl get node k8s-node-01 -o json
+
+{
+    "apiVersion": "v1",
+    "kind": "Node",
+    "metadata": {
+        "annotations": {
+            "node.alpha.kubernetes.io/ttl": "0",
+            "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+        },
+        "creationTimestamp": "2019-01-17T02:51:43Z",
+...
+</pre><p><code>kubectl describe 〜</code>で指定した各リソースの詳細を確認可能。以下はnodeの表示例。PodやDeployment、Serviceなども確認可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n120" mdtype="fences" style="page-break-inside: unset;">kubectl describe node k8s-node-01
+Name:               k8s-node-01
+Roles:              &lt;none&gt;
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    bosh.id=df99fcd8-0438-497e-be72-5fa57be5d67d
+                    bosh.zone=Compute-AZ
+                    failure-domain.beta.kubernetes.io/zone=Compute-AZ
+                    kubernetes.io/hostname=172.10.0.12
+                    spec.ip=172.10.0.12
+Annotations:        node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 17 Jan 2019 11:51:43 +0900
+....
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n123' class='md-header-anchor '></a>kubernetes上でのコンテナの実行</h1><h2><a name='header-n124' class='md-header-anchor '></a>CLIによるDeploymentの作成</h2><h3><a name='header-n125' class='md-header-anchor '></a>deploymentの確認</h3><p>なにも作成されていないことを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n127" mdtype="fences">kubectl get deployment
+</pre><h3><a name='header-n128' class='md-header-anchor '></a>kubectl runコマンドによるdeploymentの作成</h3><p><code>kubectl run</code>コマンドにコンテナイメージ(<code>--image=nginx:alpine</code>)、アプリ名(<code>nginx</code>)、アプリのポート番号(<code>--port=80</code>)を指定して実行することで、コンテナイメージがPodとして起動する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n130" mdtype="fences">kubectl run nginx --image=nginx:alpine --port=80
+</pre><p><code>kubectl run</code>によるdeploymentの作成は推奨されていない。</p><blockquote><p>kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.</p></blockquote><h3><a name='header-n134' class='md-header-anchor '></a>作成されたリソースの確認</h3><p>deployment, replicaset, podが作成されている</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n136" mdtype="fences">kubectl get all
+NAME                         READY     STATUS    RESTARTS   AGE
+pod/nginx-65748db69b-69xct   1/1       Running   0          29s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    &lt;none&gt;        443/TCP   5d
+
+NAME                    DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/nginx   1         1         1            1           29s
+
+NAME                               DESIRED   CURRENT   READY     AGE
+replicaset.apps/nginx-65748db69b   1         1         1         29s
+</pre><p>DeploymentとReplicaset、Podは以下のような関係になっており、Deploymentを作成したことによりReplicaset/Podが作成されている。</p><p><img src='./images/deploy-rs-pod.png' alt='deploy-rs-pod' referrerPolicy='no-referrer' /></p><h2><a name='header-n139' class='md-header-anchor '></a>ServiceによるPodの外部公開</h2><h3><a name='header-n140' class='md-header-anchor '></a>kubectl exposeによりdeploymentをNodePort Serviceとして公開</h3><p>NodePort ServiceはKubernetes Nodeのポート番号を利用して、Podへのアクセスを行うためのServiceリソース。Serviceには以下の種類がある。</p><ul><li>ClusterIp : クラスタ内のIPにServiceを公開する。Serviceはクラスタ内からのみアクセス可能。(デフォルトのServiceType)</li><li>NodePort : 各ノードのIP上のServiceを静的ポート(NordPort)に公開する。NodePort ServiceがルーティングするClusterIP Serviceが自動的に作成される。<code>&lt;NodeIp&gt;:&lt;NordPort&gt;</code>を要求することで、クラスタ外からNordPort Serviceにアクセス可能。利用可能なポート番号は30000～32767の範囲に限定される。</li><li>LoadBalancer : クラウドプロバイダのロードバランサを使用して外部にServiceを公開する。外部ロードバランサがルーティングするNordPort ServiceとClusterIP Serviceが自動的に作成される。</li><li>ExternalName : 値を含むCNAMEレコードを返すことにより、ServiceをexternalNameフィールドのコンテンツ(たとえば、foo.bar.example.com)にマッピングする。(この型を使うにはバージョン1.7以上のkube-dnsが必要)</li></ul><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n151" mdtype="fences">kubectl expose deployment nginx --name=nginx-np --port=80 --target-port=80 --type="NodePort"
+</pre><h3><a name='header-n152' class='md-header-anchor '></a>Serviceの確認</h3><p>Serviceリソースを確認すると、nginx-npサービスが作成され割り当てられたNodePort(以下の例では32726番)を確認可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n154" mdtype="fences">kubectl get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP        5d
+nginx-np     NodePort    10.108.151.22   &lt;none&gt;        80:32726/TCP   32s
+</pre><h3><a name='header-n155' class='md-header-anchor '></a>Serviceへのアクセス確認</h3><p>NodeのIPアドレスにポート番号をつけてアクセスする。(NodeのIPアドレスは<code>kubectl get node -o wide</code>により確認可能。)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n157" mdtype="fences">curl 192.168.99.100:32726
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Docker TEST&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+</pre><h2><a name='header-n158' class='md-header-anchor '></a>Podのスケールアウト</h2><p>deploymentのレプリカ数を3に変更し、ReplicasetのDESIRED数が変更されることを確認。Pod数も指定した数に変更される。</p><h3><a name='header-n160' class='md-header-anchor '></a>Replicaset状態の確認</h3><p>スケールアウト前にReplicasetの状態を確認し、<code>DESIRED=1</code>となっていることを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n162" mdtype="fences">kubectl get rs
+NAME               DESIRED   CURRENT   READY     AGE
+nginx-65748db69b   1         1         1         54s
+</pre><h3><a name='header-n163' class='md-header-anchor '></a>Replica数の変更</h3><p>DeploymentのReplica数を3に変更する</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n165" mdtype="fences">kubectl scale  --replicas=3 deployment/nginx
+deployment.extensions "nginx" scaled
+</pre><h3><a name='header-n166' class='md-header-anchor '></a>ReplicasetとPod数の確認</h3><p>Replicasetがのレプリカ数が3に変更され、Pod数が3つに増えたことを確認する</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n168" mdtype="fences">kubectl get rs
+NAME               DESIRED   CURRENT   READY     AGE
+nginx-65748db69b   3         3         2         1m
+
+kubectl get pods
+NAME                     READY     STATUS    RESTARTS   AGE
+nginx-65748db69b-bhcxv   1/1       Running   0          1m
+nginx-65748db69b-lzpwj   1/1       Running   0          11s
+nginx-65748db69b-xpms4   1/1       Running   0          11s
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n171' class='md-header-anchor '></a>Ingressによるサービスの公開</h1><p>通常、ClusterIPやNodeIPでPodを外部公開することはしない。Ingressと呼ばれるリソースによりClusterIPを外部に対してL7 Load Balancerで公開する。</p><h2><a name='header-n173' class='md-header-anchor '></a>ClusterIP Serviceの作成</h2><p>Nginx deploymentに対するClusterIP Serviceを新たに作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n175" mdtype="fences">kubectl expose deploy nginx --port=80 --target-port=80
+service "nginx" exposed
+</pre><p>作成されたClusterIP Serviceを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n177" mdtype="fences">kubectl get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP        5d
+nginx        ClusterIP   10.109.15.84    &lt;none&gt;        80/TCP         38m
+nginx-np     NodePort    10.108.151.22   &lt;none&gt;        80:32726/TCP   48m
+</pre><h2><a name='header-n178' class='md-header-anchor '></a>Ingressリソースの作成</h2><blockquote><p>IngressのFQDN(.spec.rules[].host)は環境似合わせて適切なFQDNに変更すること。</p></blockquote><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n181" mdtype="fences">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx
+spec:
+  rules:
+  - host: nginx.minikube.example
+    http:
+      paths:
+      - backend:
+          serviceName: nginx
+          servicePort: 80
+</pre><p>上記yamlによりIngressリソースを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n183" mdtype="fences">kubectl apply -f nginx/ingress.yaml
+ingress.extensions "nginx" created
+</pre><p>作成したIngressを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n185" mdtype="fences">kubectl get ingress
+NAME      HOSTS                ADDRESS   PORTS     AGE
+nginx     nginx.minikube.example             80        15s
+</pre><h2><a name='header-n186' class='md-header-anchor '></a>Ingressへのアクセス確認</h2><p>作成したIngressにアクセスするには指定したFQDNに対する名前解決(hostsファイル or DNS)を設定するか、アクセス時にHostヘッダを付与する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n188" mdtype="fences">curl 192.168.99.100 -H 'Host: nginx.minikube.example'
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;Docker TEST&lt;/h1&gt;&lt;/body&gt;&lt;/html
+</pre><h2><a name='header-n189' class='md-header-anchor '></a>作成したリソースの削除</h2><p>ここまでで作成したIngress, Deployment, Serviceリソースをすべて削除。 </p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n191" mdtype="fences">kubectl delete -f nginx/ingress.yaml
+ingress.extensions "nginx" deleted
+
+kubectl delete deploy nginx
+deployment.extensions "nginx" deleted
+
+kubectl delete svc nginx
+service "nginx" deleted
+
+kubectl delete svc nginx-np
+service "nginx-np" deleted
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n194' class='md-header-anchor '></a>運用に利用するコマンド</h1><h2><a name='header-n195' class='md-header-anchor '></a>コンテナ内のlog確認</h2><p>コンテナのログ・エラーを適切に設定しておくと、<code>kubectl logs</code>コマンドによりログを確認可能。podの状態の一覧を確認し、PodのIDを指定してPodの標準出力に対するログ出力を確認</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n197" mdtype="fences">kubectl get pods
+kubNAME                     READY     STATUS    RESTARTS   AGE
+nginx-65748db69b-bhcxv   1/1       Running   0          6m
+nginx-65748db69b-lzpwj   1/1       Running   0          5m
+nginx-65748db69b-xpms4   1/1       Running   0          5m
+
+kubectl logs -f nginx-65748db69b-bhcxv
+172.17.0.1 - - [12/Feb/2019:15:20:19 +0000] "GET / HTTP/1.1" 200 47 "-" "curl/7.52.1" "-"
+172.17.0.1 - - [12/Feb/2019:15:20:20 +0000] "GET / HTTP/1.1" 200 47 "-" "curl/7.52.1" "-"
+</pre><h2><a name='header-n198' class='md-header-anchor '></a>コンテナ内のシェル実行</h2><p>コンテナを指定して、<code>kubectl exec</code>コマンドによりコンテナ内のシェルを実行可能。(通常コンテナにSSHすることはせず、<code>kubectl exec</code>を利用する)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n200" mdtype="fences" style="page-break-inside: unset;">kubectl get pods
+kNAME                     READY     STATUS    RESTARTS   AGE
+nginx-65748db69b-bhcxv   1/1       Running   0          7m
+nginx-65748db69b-lzpwj   1/1       Running   0          6m
+nginx-65748db69b-xpms4   1/1       Running   0          6m
+
+kubectl exec -it nginx-65748db69b-bhcxv /bin/sh
+/ # ls -l /etc/nginx/
+total 36
+drwxr-xr-x    2 root     root          4096 Feb 12 08:47 conf.d
+-rw-r--r--    1 root     root          1077 Dec 18 20:20 fastcgi.conf
+-rw-r--r--    1 root     root          1007 Dec 18 20:20 fastcgi_params
+-rw-r--r--    1 root     root          5170 Dec 18 20:20 mime.types
+drwxr-xr-x    2 root     root          4096 Feb 12 08:47 modules
+-rw-r--r--    1 root     root          2908 Feb 12 09:17 nginx.conf
+-rw-r--r--    1 root     root           636 Dec 18 20:20 scgi_params
+-rw-r--r--    1 root     root           664 Dec 18 20:20 uwsgi_params
+</pre><h2><a name='header-n201' class='md-header-anchor '></a>リソース詳細の確認</h2><p>kubernetesの各種リソースの詳細を確認するには、<code>kubectl describe</code>コマンドを利用する。Podの作成が失敗した場合はこのコマンドで原因調査が可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n203" mdtype="fences" style="page-break-inside: unset;">kubectl get pods
+NAME                     READY   STATUS         RESTARTS   AGE
+mysql-7f96fb5df6-b2sh7   0/1     Pending        0          22m
+nginx-84474f874-5fsvf    0/1     ErrImagePull   0          13s
+nginx-84474f874-c7s9v    0/1     ErrImagePull   0          13s
+nginx-84474f874-sjpkd    0/1     ErrImagePull   0          13s
+
+kubectl describe pod nginx-84474f874-5fsvf
+Name:               nginx-84474f874-5fsvf
+Namespace:          default
+...
+Events:
+  Type     Reason     Age   From               Message
+  ----     ------     ----  ----               -------
+  Normal   Scheduled  20s   default-scheduler  Successfully assigned default/nginx-84474f874-5fsvf to minikube
+  Normal   Pulling    18s   kubelet, minikube  pulling image "masanara/nginx-php:0.8"
+  Warning  Failed     12s   kubelet, minikube  Failed to pull image "masanara/nginx-php:0.8": rpc error: code = Unknown desc = Error response from daemon: manifest for masanara/nginx-php:0.8 not found
+  Warning  Failed     12s   kubelet, minikube  Error: ErrImagePull
+  Normal   BackOff    12s   kubelet, minikube  Back-off pulling image "masanara/nginx-php:0.8"
+  Warning  Failed     12s   kubelet, minikube  Error: ImagePullBackOff
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n206' class='md-header-anchor '></a>YAMLファイルによるリソースの作成</h1><p>これまではkubectlコマンドを利用して、Deployment/Pod/Service/Ingress(リソース)を作成してきたが通常はYAMLファイルで定義し、YAMLファイルによりkubernetesクラスター上にリソースを作成する。</p><ul><li><p>Deploymentを定義</p><ul><li>コンテナイメージの指定(masanara/nginx-php:1.0)</li><li>レプリカ数を3に指定</li><li>コンテナに対するprobe(ヘルスチェック)の指定</li></ul></li><li><p>Serviceを定義</p><ul><li>ClusterIPとしてサービスを定義</li></ul></li><li><p>Ingressを定義</p><ul><li>Ingressとして「nginx.minikube.example」に対するアクセスを定義</li><li>nginx serviceに対してIngressを定義</li></ul></li></ul><h2><a name='header-n230' class='md-header-anchor '></a>リソースの定義方法</h2><p>上記のDeployment, Service, Ingressを一つのYAMLファイルにした例は以下の通り。複数のyamlファイルは<code>---</code>で区切ることで、単一のyamlファイルとすることができるため、Deployment、Serviceを単一のファイルとして作成。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n232" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: masanara/nginx-php:1.0
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /index.php
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    app: nginx
+</pre><h2><a name='header-n233' class='md-header-anchor '></a>YAMLファイルによるリソースの作成</h2><p>YAMLファイルによりリソースを作成する場合は、<code>kubectl apply -f filename</code>を利用する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n235" mdtype="fences">kubectl apply -f nginx/nginx.yaml
+deployment.extensions/nginx created
+service/nginx created
+
+kubectl apply -f nginx/ingress.yaml
+ingress.extensions/nginx created
+</pre><h2><a name='header-n236' class='md-header-anchor '></a>作成されたリソースの確認</h2><p>作成されたリソースは<code>kubectl get</code>により確認可能。<code>get all</code>によりリソース名を個別に指定することなくリソースを表示することが可能。一部のリソースは表示されないので注意。(configmapやpv等)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n238" mdtype="fences" style="page-break-inside: unset;">kubectl get all
+
+NAME                         READY     STATUS    RESTARTS   AGE
+pod/nginx-67bd888d8f-7bkzt   1/1       Running   0          6m
+pod/nginx-67bd888d8f-rvkmq   1/1       Running   0          6m
+pod/nginx-67bd888d8f-wgpr6   1/1       Running   0          6m
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1        &lt;none&gt;        443/TCP   5d
+service/nginx        ClusterIP   10.109.235.186   &lt;none&gt;        80/TCP    6m
+
+NAME                    DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/nginx   3         3         3            3           6m
+
+NAME                               DESIRED   CURRENT   READY     AGE
+replicaset.apps/nginx-67bd888d8f   3         3         3         6m
+
+kubectl get ingress
+NAME      HOSTS                ADDRESS     PORTS     AGE
+nginx     nginx.minikube.example   10.0.2.15   80        4m
+</pre><p>上記リソースの構成は以下の通り。</p><p><img src='./images/nginx_structure.png' alt='nginx_structure' referrerPolicy='no-referrer' /></p><h2><a name='header-n241' class='md-header-anchor '></a>Ingressに対するアクセスの確認</h2><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="shell" contenteditable="false" cid="n242" mdtype="fences">curl nginx.minikube.example
+nginx-67bd888d8f-7bkzt:172.17.0.7:version 1.0
+
+curl nginx.minikube.example
+nginx-67bd888d8f-wgpr6:172.17.0.8:version 1.0
+
+curl nginx.minikube.example
+nginx-67bd888d8f-rvkmq:172.17.0.4:version 1.0
+</pre><h2><a name='header-n243' class='md-header-anchor '></a>YAMLファイルによるリソースの削除</h2><p>YAMLファイルにより作成したリソースは同じYAMLファイルを利用して削除可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n245" mdtype="fences">kubectl delete -f nginx-sample.yaml
+deployment.extensions "nginx" deleted
+service "nginx" deleted
+ingress.extensions "nginx" deleted
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n248' class='md-header-anchor '></a>Podの作成例</h1><p>単一Podに複数コンテナを作成することができ、同一Pod内ではネットワークが共有されストレージも共有することができる。</p><p><img src='./images/pod_structure.png' alt='pod_structure' referrerPolicy='no-referrer' /></p><h2><a name='header-n251' class='md-header-anchor '></a>複数コンテナで構成されるPodの定義方法</h2><p>以下のようなPod定義ファイルにより単一Pod内で複数のContainerを実行することが可能。(サイドカーパターンと呼ばれるPodのデプロイ方法)</p><ul><li>shared-logsというVolumeを作成する。(emptyDirであるためPodの削除と同時にVolumeは削除される)</li><li>alpine-linuxコンテナは5秒ごとにshred-logsボリュームのファイル(/var/log/app.txt)にタイムスタンプを追記し続ける。</li><li>nginxコンテナはshared-logsボリュームのファイル(/usr/share/nginx/html)をHTTPサーバーのコンテンツとして公開する。</li></ul><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n260" mdtype="fences" style="page-break-inside: unset;">apiVersion: v1
+kind: Pod
+metadata:
+  name: mc-pod
+  labels:
+spec:
+  volumes:
+  - name: shared-logs
+    emptyDir: {}
+  containers:
+  - name: alpine-linux
+    image: alpine:3.9
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do date &gt;&gt; /var/log/app.txt; sleep 5; done"]
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /var/log
+  - name: nginx
+    image: nginx:1-alpine
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /usr/share/nginx/html
+</pre><h2><a name='header-n261' class='md-header-anchor '></a>複数コンテナで構成されるPodの作成</h2><p>上記定義ファイルによりPodを起動してみる。podが起動し、<code>READY</code>が<code>2/2</code>と表示されている。これは2つのコンテナが定義されており、2つともコンテナが起動していることを表している。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n263" mdtype="fences">kubectl apply -f pod/mc-pod.yaml
+pod/mc-pod created
+
+kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+mc-pod                   2/2     Running   0          75s
+</pre><p><code>kubectl describe</code>コマンドで確認するとpod内に2つのコンテナが起動していることを確認できる。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n265" mdtype="fences" style="page-break-inside: unset;">kubectl describe pod mc-pod
+Name:               mc-pod
+Namespace:          default
+Priority:           0
+PriorityClassName:  &lt;none&gt;
+...
+Containers:
+  alpine-linux:
+    Container ID:  docker://03ecfb3b93458340a6064557d92298acb846a4b259b5b5f4c4d00c2bce10dc18
+    Image:         alpine:3.9
+    State:         Running
+...
+  nginx:
+    Container ID:  docker://664f1c8d0f8b420b52b9c1e6dbd9ab29a6b487ad63003322f849b1762ad12564
+    Image:         nginx:1-alpine
+    State:         Running
+</pre><h2><a name='header-n266' class='md-header-anchor '></a>Pod内の確認</h2><p><code>kubectl exec</code>コマンドでpod内を確認してみる。</p><h3><a name='header-n268' class='md-header-anchor '></a>alpine-linuxコンテナへの接続</h3><p>localhost宛の接続でhttpサーバー(nginx)がコンテンツを返してくれるが、プロセスとしてはnginxは動いていない。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n270" mdtype="fences" style="page-break-inside: unset;">kubectl exec -it mc-pod -c alpine-linux /bin/sh
+/ # wget localhost/app.txt
+Connecting to localhost (127.0.0.1:80)
+app.txt              100% |************************************************************************************************************************************|  2262  0:00:00 ETA
+/ # tail app.txt
+Thu Mar  7 01:28:29 UTC 2019
+Thu Mar  7 01:28:34 UTC 2019
+Thu Mar  7 01:28:39 UTC 2019
+Thu Mar  7 01:28:44 UTC 2019
+Thu Mar  7 01:28:49 UTC 2019
+Thu Mar  7 01:28:54 UTC 2019
+Thu Mar  7 01:28:59 UTC 2019
+Thu Mar  7 01:29:04 UTC 2019
+Thu Mar  7 01:29:09 UTC 2019
+Thu Mar  7 01:29:14 UTC 2019
+/ # ps ax
+PID   USER     TIME  COMMAND
+    1 root      0:00 /bin/sh -c while true; do date &gt;&gt; /var/log/app.txt; sleep 5; done
+  161 root      0:00 /bin/sh
+  222 root      0:00 sleep 5
+  223 root      0:00 ps ax
+/ # ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: sit0@NONE: &lt;NOARP&gt; mtu 1480 qdisc noop state DOWN qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+36: eth0@if37: &lt;BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN&gt; mtu 1500 qdisc noqueue state UP
+    link/ether 02:42:ac:11:00:0a brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.10/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+/ # exit
+</pre><h3><a name='header-n271' class='md-header-anchor '></a>nginxコンテナへの接続</h3><p>nginxコンテナではnginxが起動しており、alpine-linuxコンテナと同じIPアドレスが利用されており、ネットワークネームスペースは共有されている。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n273" mdtype="fences" style="page-break-inside: unset;">kubectl exec -it mc-pod -c nginx /bin/sh
+/ # ps ax
+PID   USER     TIME  COMMAND
+    1 root      0:00 nginx: master process nginx -g daemon off;
+    7 nginx     0:00 nginx: worker process
+    8 root      0:00 /bin/sh
+   14 root      0:00 ps ax
+/ # ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: sit0@NONE: &lt;NOARP&gt; mtu 1480 qdisc noop state DOWN qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+36: eth0@if37: &lt;BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN&gt; mtu 1500 qdisc noqueue state UP
+    link/ether 02:42:ac:11:00:0a brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.10/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+/ # exit
+</pre><p>確認が終わったら、作成したPodを削除する。yamlファイル(pod/mc-pod.yaml)を利用した削除も可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n275" mdtype="fences">kubectl delete pod mc-pod
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n278' class='md-header-anchor '></a>Persistent Volume</h1><p>通常、Podは削除されると起動中に変更されたデータもすべて失われる。データを永続的に保存するためにPersistent Volumeが利用される。PersistentVolumeは外部の永続ボリュームを提供するシステムと連携して、新規のボリューム作成や、既存ボリュームの削除を行うことが可能。PesistentVolumeにはProvisoner(プラグイン)が用意されておりStorageClassとして定義することで、GlusterFSやvSphere Storage、AWSのEBS等を利用してPod向けのVolumeの作成や削除が可能。</p><p>Dynamic Provisioning機能により、Podから利用するための永続ボリュームをPersistentVolumeClaimとしてStorageClassに対して要求することで、Persistent Volumeが必要に応じて作成される。</p><h2><a name='header-n281' class='md-header-anchor '></a>StorageClassの定義</h2><p>環境によってはStorageClass(sc)が事前定義されている。</p><h3><a name='header-n283' class='md-header-anchor '></a>minikubeの場合</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n284" mdtype="fences">kubectl get storageclass
+NAME                    PROVISIONER                AGE
+glusterfile (default)   gluster.org/glusterfile    19h
+standard                k8s.io/minikube-hostpath   19h
+</pre><h3><a name='header-n285' class='md-header-anchor '></a>OpenShift(GlusterFS)の場合</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n286" mdtype="fences">kubectl get storageclass
+NAME                      PROVISIONER                AGE
+glusterfs-storage         kubernetes.io/glusterfs    22d
+glusterfs-storage-block   gluster.org/glusterblock   22d
+</pre><h2><a name='header-n287' class='md-header-anchor '></a>Persisten Volume (PV)の作成</h2><p><code>kind: PersistentVolume</code>を定義する。1GBの容量を持ち単一のPodからのみ読み書き可能(ReadWriteOnce)。<code>persistentVolumeReclaimPolicy: Retain</code>とすることで、PVCを削除してもPVは削除されない。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n289" mdtype="fences" style="page-break-inside: unset;">apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv01
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: /data/pv01
+    type: DirectoryOrCreate
+</pre><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n290" mdtype="fences">kubectl apply -f pv/pv.yaml
+persistentvolume "pv01" created
+
+kubectl get pv
+NAME      CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM     STORAGECLASS   REASON    AGE
+pv01      1Gi        RWO            Delete           Available             standard                 2s
+</pre><h2><a name='header-n291' class='md-header-anchor '></a>PVC(Persistent Volume Claim)の作成</h2><p>PersistentVolumeClaimリソースを定義する。PodはPVCを介してPVの割当を受ける。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n293" mdtype="fences">apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-hostpath
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+</pre><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n294" mdtype="fences">kubectl apply -f pv/pvc.yaml
+persistentvolumeclaim "pvc-hostpath" created
+
+kubectl get pv,pvc
+NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                  STORAGECLASS   REASON    AGE
+persistentvolume/pv01   1Gi        RWO            Retain           Bound     default/pvc-hostpath   standard                 4s
+
+NAME                                 STATUS    VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/pvc-hostpath   Bound     pv01      1Gi        RWO            standard       2s
+</pre><h2><a name='header-n295' class='md-header-anchor '></a>Podへのマウント確認</h2><p>PVCを指定し、マウント先を定義したPodを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n297" mdtype="fences" style="page-break-inside: unset;">apiVersion: v1
+kind: Pod
+metadata:
+  name: pvc-hostpath-pod
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    command: ["tail", "-f", "/dev/null"]
+    volumeMounts:
+    - name: claim-volume
+      mountPath: /data
+  volumes:
+  - name: claim-volume
+    persistentVolumeClaim:
+      claimName: pvc-hostpath
+  terminationGracePeriodSeconds: 0
+</pre><p>podを作成することによりpvc経由でpvを取得し、指定した<code>mountPath</code>にPVがマウントされる。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n299" mdtype="fences">kubectl apply -f pv/pod.yaml
+pod "pvc-slow-test" created
+
+kubectl get pv,pvc,pod
+NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                  STORAGECLASS   REASON    AGE
+persistentvolume/pv01   1Gi        RWO            Retain           Bound     default/pvc-hostpath   standard                 47s
+
+NAME                                 STATUS    VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/pvc-hostpath   Bound     pv01      1Gi        RWO            standard       45s
+
+NAME                   READY     STATUS    RESTARTS   AGE
+pod/pvc-hostpath-pod   1/1       Running   0          6s
+</pre><h2><a name='header-n300' class='md-header-anchor '></a>Podに接続したPVにファイルを作成</h2><p>PVとして接続されたボリュームにファイルを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n302" mdtype="fences">kubectl exec -it pvc-hostpath-pod /bin/sh
+/ # ls -l /data
+total 4
+-rw-r--r--    1 root     root            29 Feb 28 15:37 test.txt
+/ # date &gt; /data/test.txt
+/ # cat /data/test.txt
+Thu Feb 28 15:46:36 UTC 2019
+/ # exit
+</pre><h2><a name='header-n303' class='md-header-anchor '></a>Podの削除</h2><p>作成したPodを削除。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n305" mdtype="fences">kubectl delete -f pv/pod.yaml
+pod "pvc-hostpath-pod" deleted
+
+kubectl get pv,pvc,pod
+NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                  STORAGECLASS   REASON    AGE
+persistentvolume/pv01   1Gi        RWO            Retain           Bound     default/pvc-hostpath   standard                 2m
+
+NAME                                 STATUS    VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/pvc-hostpath   Bound     pv01      1Gi        RWO            standard       2m
+</pre><h2><a name='header-n306' class='md-header-anchor '></a>Podの再作成とPV内に作成したファイルの残存確認</h2><p>異なるマニフェスト(PVのマウント場所が違う)で再度podを作成し、以前作成したファイルが存在していることを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n308" mdtype="fences" style="page-break-inside: unset;">kubectl apply -f pv/pod2.yaml
+pod "pvc-hostpath-pod" created
+
+kubectl get pv,pvc,pod
+NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                  STORAGECLASS   REASON    AGE
+persistentvolume/pv01   1Gi        RWO            Retain           Bound     default/pvc-hostpath   standard                 3m
+
+NAME                                 STATUS    VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/pvc-hostpath   Bound     pv01      1Gi        RWO            standard       3m
+
+NAME                   READY     STATUS    RESTARTS   AGE
+pod/pvc-hostpath-pod   1/1       Running   0          8s
+
+kubectl exec -it pvc-hostpath-pod /bin/sh
+/ # ls -l /mnt/
+total 4
+-rw-r--r--    1 root     root            29 Feb 28 15:46 test.txt
+/ # cat /mnt/test.txt
+Thu Feb 28 15:46:36 UTC 2019
+/ # exit
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n311' class='md-header-anchor '></a>Persistent VolumeのDynamic Provisoning</h1><p>PV作成、PVC作成、Pod作成するのではなく、PVCを作成しておいて、Podを作成すると必要に応じてPVが作成されるDynamic Provisioningを試してみる。</p><p>複数のyamlファイルは<code>---</code>で区切ることで、単一のyamlファイルとすることができるため、PVC、Deployment、Serviceを単一のファイルとして作成。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n314" mdtype="fences" style="page-break-inside: unset;">---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nginx-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 2Mi
+  storageClassName: glusterfile
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-with-pv
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx-with-pv
+    spec:
+      containers:
+      - image: nginx:stable-alpine
+        name: nginx
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: pv-website
+      volumes:
+      - name: pv-website
+        persistentVolumeClaim:
+          claimName: nginx-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+spec:
+  ports:
+  - port: 8000
+    targetPort: 80
+    nodePort: 30080
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: nginx-with-pv
+</pre><p>dynamic.yamlを適用すると、PVC<code>nginx-pvc</code>が作成され、2つのPodが必要とするPVが動的に生成され、Podに接続される。</p><p>PVCのaccessModesとして、<code>ReadWriteMany</code>を指定しているがaccessModesの挙動はStorageClassによって異なる。(<a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes'>詳細はここ</a>)今回は複数のPodから同じPVを参照する。</p><h2><a name='header-n317' class='md-header-anchor '></a>Deploymentの作成</h2><p>上記yamlファイルによりnginx deploymentを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n319" mdtype="fences">kubectl apply -f dynamic-pvc/dynamic.yaml
+persistentvolumeclaim/nginx-pvc created
+deployment.extensions/nginx-with-pv created
+service/nginx-svc created
+</pre><h2><a name='header-n320' class='md-header-anchor '></a>Persistent Volumeの利用</h2><p>作成されたPV内にnginx用コンテンツを作成し、各Podからアクセス可能なことを確認する。</p><p>作成したPod名を確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n323" mdtype="fences">kubectl get pods
+NAME                             READY     STATUS    RESTARTS   AGE
+nginx-with-pv-764f58df84-24btf   1/1       Running   0          21h
+nginx-with-pv-764f58df84-jgjbz   1/1       Running   0          21h
+</pre><p>kubectl execによりpod内でマウントされているPV上にファイルを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n325" mdtype="fences">kubectl exec -it nginx-with-pv-764f58df84-24btf /bin/sh
+/ # date &gt; /usr/share/nginx/html/index.html
+/ # cat /usr/share/nginx/html/index.html
+Mon Mar  4 11:53:31 UTC 2019
+/ # exit
+</pre><p>kubectl execにより作成されたファイルを各Podで確認</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n327" mdtype="fences">kubectl exec nginx-with-pv-764f58df84-24btf "cat" "/usr/share/nginx/html/index.html"
+Mon Mar  4 11:53:31 UTC 2019
+
+kubectl exec nginx-with-pv-764f58df84-jgjbz "cat" "/usr/share/nginx/html/index.html"
+Mon Mar  4 11:53:31 UTC 2019
+</pre><p>10回程度curlコマンドを繰り返すと、NodePort Service経由で各Podのnginxにアクセスが発生し、作成されたコンテンツが表示されることを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n329" mdtype="fences">curl -D - 192.168.99.100:30080
+HTTP/1.1 200 OK
+Server: nginx/1.14.2
+Date: Mon, 04 Mar 2019 12:13:04 GMT
+Content-Type: text/html
+Content-Length: 29
+Last-Modified: Mon, 04 Mar 2019 11:53:31 GMT
+Connection: keep-alive
+ETag: "5c7d11bb-1d"
+Accept-Ranges: bytes
+
+Mon Mar  4 11:53:31 UTC 2019
+</pre><h2><a name='header-n330' class='md-header-anchor '></a>Podへのアクセス確認</h2><p>各Podにアクセスログが残っていることを確認する</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n332" mdtype="fences">kubectl logs nginx-with-pv-764f58df84-tqn75
+172.17.0.1 - - [04/Mar/2019:12:12:57 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:12:58 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:12:59 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:00 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:01 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:01 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:04 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+
+kubectl logs nginx-with-pv-764f58df84-8hc4x
+172.17.0.1 - - [04/Mar/2019:12:12:59 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:00 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+172.17.0.1 - - [04/Mar/2019:12:13:02 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+</pre><h2><a name='header-n333' class='md-header-anchor '></a>Podの削除とデータの永続性</h2><p>PVにデータは残っているため、podを削除してもコンテンツは永続化される。また、podを削除してもDeploymentによりReplicasetが構成されているため、自動的にPodが再作成される。以下の例では、<code>nginx-with-pv-764f58df84-hr6lc</code>を削除したことにより、<code>nginx-with-pv-764f58df84-4g6d5</code>が自動的に作成された。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n335" mdtype="fences">kubectl get pods -o wide
+NAME                             READY     STATUS    RESTARTS   AGE       IP           NODE
+nginx-with-pv-764f58df84-hr6lc   1/1       Running   0          3m        172.17.0.8   minikube
+nginx-with-pv-764f58df84-vwxjz   1/1       Running   0          3m        172.17.0.3   minikube
+
+kubectl delete pod nginx-with-pv-764f58df84-hr6lc
+pod "nginx-with-pv-764f58df84-hr6lc" deleted
+
+kubectl get pods -o wide
+NAME                             READY     STATUS        RESTARTS   AGE       IP           NODE
+nginx-with-pv-764f58df84-4g6d5   1/1       Running       0          5s        172.17.0.8   minikube
+nginx-with-pv-764f58df84-hr6lc   0/1       Terminating   0          3m        172.17.0.8   minikube
+nginx-with-pv-764f58df84-vwxjz   1/1       Running       0          3m        172.17.0.3   minikube
+</pre><p><code>nginx-with-pv-764f58df84-4g6d5</code>は新たに生成されたものであるため、アクセスログは消去されるがPV上のコンテンツを参照してHTTPレスポンスを返す。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n337" mdtype="fences">kubectl logs nginx-with-pv-764f58df84-4g6d5
+172.17.0.1 - - [04/Mar/2019:12:24:55 +0000] "GET / HTTP/1.1" 200 29 "-" "curl/7.54.0" "-"
+</pre><h2><a name='header-n338' class='md-header-anchor '></a>環境の削除</h2><p>作成したpvc, pod, svcを削除する。pvcとpvを参照しているpodが削除されることにより、pvも自動的に削除される。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n340" mdtype="fences">kubectl delete -f dynamic.yaml
+persistentvolumeclaim "nginx-pvc" deleted
+deployment.extensions "nginx-with-pv" deleted
+service "nginx-svc" deleted
+
+kubectl get pv,pvc,pod
+No resources found.
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n343' class='md-header-anchor '></a>Config Mapの利用</h1><p>Config Mapは設定値や設定ファイルを保持するためのリソースで、Deployment(Pod)からは環境変数として読み込んだり、ファイルとして Volume にマウントしたりして使用することが可能。</p><h2><a name='header-n345' class='md-header-anchor '></a>Config Mapの構成</h2><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n346" mdtype="fences" style="page-break-inside: unset;">kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mysql-config
+data:
+  mysql.cnf: |-
+    [mysqld]
+    bind-address     = 0.0.0.0
+    character-set-server=utf8
+    collation-server=utf8_bin
+    default-storage-engine=INNODB
+    max_allowed_packet=256M
+    innodb_log_file_size=2GB
+    transaction-isolation=READ-COMMITTED
+</pre><p>上記yamlによりconfigmapを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n348" mdtype="fences">kubectl apply -f mysql/configmap.yaml
+
+kubectl get configmap
+NAME           DATA      AGE
+mysql-config   1         18h
+</pre><h2><a name='header-n349' class='md-header-anchor '></a>Config Mapを利用したPodの起動</h2><p>Deploymentを利用してConfig Mapを利用してMySQL Podを起動してみる。mysqlの起動に必要なユーザー名、パスワード(<code>MYSQL_ROOT_PASSWORD, MYSQL_USER, MYSQL_PASSWORD</code>)は環境変数としてDeployment内で指定している。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n351" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1.0G"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password123
+        - name: MYSQL_USER
+          value: sqluser
+        - name: MYSQL_PASSWORD
+          value: password123
+        volumeMounts:
+        - name: mysql-pv
+          mountPath: /docker-entrypoint-initdb.d/
+        - name: config-volume
+          mountPath: /etc/mysql/conf.d
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mysql-config
+      - name: mysql-pv
+        persistentVolumeClaim:
+          claimName: mysql-pvc
+</pre><h2><a name='header-n352' class='md-header-anchor '></a>Deploymentの作成</h2><p>上記deploymentを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n354" mdtype="fences">kubectl apply -f mysql/mysql-with-configmap.yaml
+deployment.extensions "mysql-with-configmap" created
+
+kubectl get pods
+NAME                                    READY     STATUS    RESTARTS   AGE
+mysql-with-configmap-69bf686b96-bcw5h   1/1       Running   0          6s
+</pre><h2><a name='header-n355' class='md-header-anchor '></a>Config Mapが反映されていることの確認</h2><p>configmapの設定内容がPodの<code>/etc/mysql/conf.d/mysql.cnf</code>として反映されている。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n357" mdtype="fences" style="page-break-inside: unset;">kubectl exec -it mysql-with-configmap-69bf686b96-bcw5h /bin/bash
+root@mysql-with-configmap-69bf686b96-bcw5h:/# ls -al /etc/mysql/conf.d/
+total 12
+drwxrwxrwx 3 root root 4096 Mar  5 11:17 .
+drwxr-xr-x 4 root root 4096 Feb  6 07:07 ..
+drwxr-xr-x 2 root root 4096 Mar  5 11:17 ..2019_03_05_11_17_40.605978892
+lrwxrwxrwx 1 root root   31 Mar  5 11:17 ..data -&gt; ..2019_03_05_11_17_40.605978892
+lrwxrwxrwx 1 root root   16 Mar  5 11:17 mysql.cnf -&gt; ..data/mysql.cnf
+root@mysql-with-configmap-69bf686b96-bcw5h:/# cat /etc/mysql/conf.d/mysql.cnf
+[mysqld]
+bind-address     = 0.0.0.0
+character-set-server=utf8
+collation-server=utf8_bin
+default-storage-engine=INNODB
+max_allowed_packet=256M
+innodb_log_file_size=2GB
+transaction-isolation=READ-COMMITTED
+root@mysql-with-configmap-69bf686b96-bcw5h:/#
+</pre><p>環境変数として渡したmysqlのユーザー名、パスワードでPod内からmysqlに接続可能なことを確認し、実際に上記の設定内容<code>character-set-server=utf8</code>が適用されていることを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n359" mdtype="fences" style="page-break-inside: unset;">root@mysql-with-configmap-69bf686b96-bcw5h:/# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.6.43 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt; use mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&gt; show variables like '%char%';
++--------------------------+----------------------------+
+| Variable_name            | Value                      |
++--------------------------+----------------------------+
+| character_set_client     | latin1                     |
+| character_set_connection | latin1                     |
+| character_set_database   | utf8                       |
+| character_set_filesystem | binary                     |
+| character_set_results    | latin1                     |
+| character_set_server     | utf8                       |
+| character_set_system     | utf8                       |
+| character_sets_dir       | /usr/share/mysql/charsets/ |
++--------------------------+----------------------------+
+8 rows in set (0.01 sec)
+
+mysql&gt; exit
+Bye
+root@mysql-with-configmap-69bf686b96-bcw5h:/# exit
+exit
+</pre><h2><a name='header-n360' class='md-header-anchor '></a>Deploymentの削除</h2><p>作成した環境を削除する。(※configmapは次のsecretと一緒に利用するため削除しない)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n362" mdtype="fences">kubectl delete -f mysql/mysql-simple.yaml
+deployment.extensions "mysql" deleted
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n365' class='md-header-anchor '></a>Secretの利用</h1><p>上記の例では、mysqlのユーザー名、パスワードを環境変数としてDeploymentに直接書いていたが、このような情報をDeployment内に記述することは好ましくない。これらを管理するためにSecretリソースを利用することができる。</p><h2><a name='header-n367' class='md-header-anchor '></a>Secretの作成</h2><p>以下のyamlファイルを作成して、secretを作成する。Secretは<code>key:value</code>で定義し、valueはbase64でエンコードされている必要がある。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n369" mdtype="fences">apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secrets
+type: Opaque
+data:
+  mysql-root-password: cGFzc3dvcmQxMjM=
+  mysql-user: c3FsdXNlcg==
+  mysql-password: cGFzc3dvcmQxMjM=
+</pre><h3><a name='header-n370' class='md-header-anchor '></a>base64エンコードの方法</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n371" mdtype="fences">echo -n 'password123' | base64
+cGFzc3dvcmQxMjM=
+
+echo -n 'sqluser' | base64
+c3FsdXNlcg==
+</pre><h3><a name='header-n372' class='md-header-anchor '></a>Secretリソースの作成</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n373" mdtype="fences">kubectl apply -f mysql/secret.yaml
+secret "mysql-secrets" created
+
+kubectl get secret
+NAME                  TYPE                                  DATA      AGE
+default-token-mxfkn   kubernetes.io/service-account-token   3         3d
+mysql-secrets         Opaque                                3         6s
+</pre><h2><a name='header-n374' class='md-header-anchor '></a>Deploymentの作成</h2><p>Secretを参照するDeploymentを作成する。コンテナイメージに渡す環境変数として、<code>MYSQL_ROOT_PASSWORD</code>,<code>MYSQL_USER</code>,<code>MYSQL_PASSWORD</code>の3つに対してSecretで定義した情報を利用している。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n376" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql-with-secret
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1.0G"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-root-password
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-password
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/mysql/conf.d
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mysql-config
+</pre><p>上記yamlにより、mysql deploymentを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n378" mdtype="fences">kubectl apply -f mysql/mysql-with-secret.yaml
+deployment.extensions "mysql-with-secret" created
+</pre><p>起動したmysql podに対して<code>kubectl exec</code>コマンドで接続し、指定したパスワードでmysqlにログインできることを確認し、Secretが反映できていることを確認できる。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n380" mdtype="fences" style="page-break-inside: unset;">kubectl get pods
+NAME                                 READY     STATUS    RESTARTS   AGE
+mysql-with-secret-548cb974b9-4k2vx   1/1       Running   0          4s
+
+kubectl exec -it mysql-with-secret-548cb974b9-4k2vx /bin/bash
+root@mysql-with-secret-548cb974b9-4k2vx:/# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.6.43 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt; exit
+Bye
+root@mysql-with-secret-548cb974b9-4k2vx:/# exit
+</pre><h2><a name='header-n381' class='md-header-anchor '></a>Deploymentの削除</h2><p>作成した環境を削除する。(※onfigmapおよびsecretはこのあと使うので削除しない。)</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n383" mdtype="fences">kubectl delete -f mysql/mysql-with-secret.yaml
+deployment.extensions "mysql-with-secret" deleted
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n386' class='md-header-anchor '></a>MySQL Deploymentの作成</h1><p>ConfigmapとSecretに加えて、Dynamic Provisioningを利用してMySQL Podを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n388" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1.0G"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-root-password
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-password
+        volumeMounts:
+        - name: mysql-pv
+          mountPath: /docker-entrypoint-initdb.d/
+        - name: config-volume
+          mountPath: /etc/mysql/conf.d
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mysql-config
+      - name: mysql-pv
+        persistentVolumeClaim:
+          claimName: mysql-pvc
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysql-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: glusterfile
+</pre><h2><a name='header-n389' class='md-header-anchor '></a>MySQL Deploymentの作成と確認</h2><p>kubectl applyコマンドによりmysql deploymentを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n391" mdtype="fences">kubectl apply -f mysql/mysql.yaml
+deployment.extensions/mysql created
+</pre><p>作成されたpersistentvolume, persistentvolumeclaim, podを確認する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n393" mdtype="fences">kubectl get pv,pvc,pod
+NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM               STORAGECLASS   REASON   AGE
+persistentvolume/pvc-f9433a49-3f4c-11e9-bafe-080027c195af   1Gi        RWX            Delete           Bound    default/mysql-pvc   glusterfile             50s
+
+NAME                              STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/mysql-pvc   Bound    pvc-f9433a49-3f4c-11e9-bafe-080027c195af   1Gi        RWX            glusterfile    67s
+
+NAME                         READY   STATUS    RESTARTS   AGE
+pod/mysql-7f96fb5df6-q9vts   1/1     Running   0          67s
+</pre><h2><a name='header-n394' class='md-header-anchor '></a>MySQL Serviceの作成</h2><p>クラスター内の他PodからMySQLを簡単に参照できるよう、ServiceとしてMySQLを公開する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n396" mdtype="fences">apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-svc
+spec:
+  ports:
+  - port: 3306
+    protocol: TCP
+  selector:
+    app: mysql
+</pre><p>上記yamlファイルによりmysql-svcを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n398" mdtype="fences">kubectl apply -f mysql/mysql-svc.yaml
+service/mysql-svc created
+</pre><p><code>mysql-svc</code>が作成される。Serviceを作成することにより、同じネームスペースの他Podから<code>mysql-svc</code>という名前でMySQL Podへの接続が可能になる。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n400" mdtype="fences">kubectl get svc
+NAME                            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+glusterfile-dynamic-mysql-pvc   ClusterIP   10.104.181.36   &lt;none&gt;        1/TCP      3m3s
+kubernetes                      ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP    110m
+mysql-svc                       ClusterIP   10.96.226.238   &lt;none&gt;        3306/TCP   3m11s
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n403' class='md-header-anchor '></a>Wordpress Deploymentの作成</h1><p>wordpress podを作成する。wordpressはDockerの公式wordpressコンテナイメージを利用する。MySQLを参照するための情報を以下の環境変数として利用する。</p><ul><li>WORDPRESS_DB_HOST : MySQL Podを接続先として指定。<code>mysql-svc</code>Serviceリソースを作成しているので、名前で接続が可能。</li><li>WORDPRESS_DB_USER : MySQLに接続するためのユーザー名 (DBを作成する必要があるのでrootユーザーで接続)</li><li>WORDPRESS_DB_PASSWORD : MySQLに接続するrootユーザーのパスワード。MySQL Deployment作成時に利用したSecret<code>mysql-secrets</code>を利用。</li><li>WORDPRESS_DB_NAME : Wordpressが利用するためにMySQLに作成されるデーターベース名。</li><li>WORDPRESS_DABLE_PREFIX : Wordpressデータベース内に作成されるテーブルのプリフィックス。</li></ul><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n416" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordpress
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wordpress
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+      - image: wordpress:5.0-php7.3-apache
+        imagePullPolicy: IfNotPresent
+        name: wordpress
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /index.php
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: mysql-svc:3306
+        - name: WORDPRESS_DB_USER
+          value: root
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-root-password
+        - name: WORDPRESS_DB_NAME
+          value: wpdb
+        - name: WORDPRESS_TABLE_PREFIX
+          value: wp_
+</pre><h2><a name='header-n417' class='md-header-anchor '></a>Wordpress Deploymentの作成</h2><p>上記yamlファイルによりdeploymentを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n419" mdtype="fences">kubectl apply -f wordpress/wordpresss.yaml
+deployment.extensions/wordpress created
+
+kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-7f96fb5df6-q9vts       1/1     Running   0          5m32s
+wordpress-764cf8845c-cb429   0/1     Running   0          8s
+wordpress-764cf8845c-r8zn2   0/1     Running   0          8s
+wordpress-764cf8845c-wpmrw   0/1     Running   0          8s
+</pre><h2><a name='header-n420' class='md-header-anchor '></a>Wordpresss Serviceの作成</h2><p>WordpressをIngressで公開するための準備としてClusterIPで<code>wordpress-svc</code>を作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n422" mdtype="fences">apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    app: wordpress
+</pre><p>上記yamlを利用してサービスリソースを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n424" mdtype="fences">kubectl apply -f wordpress/wordpresss-svc.yaml
+service/wordpress-svc created
+
+kubectl get svc
+NAME                            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+glusterfile-dynamic-mysql-pvc   ClusterIP   10.104.181.36   &lt;none&gt;        1/TCP      6m5s
+kubernetes                      ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP    113m
+mysql-svc                       ClusterIP   10.96.226.238   &lt;none&gt;        3306/TCP   6m13s
+wordpress-svc                   ClusterIP   10.106.95.234   &lt;none&gt;        80/TCP     3s
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n427' class='md-header-anchor '></a>IngressによるWordpressの公開</h1><p>Wordpressへのログインが必要となるため、IngressでCookie Persistentを有効化する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n429" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wordpress-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+spec:
+  rules:
+  - host: wp.minikube.example
+    http:
+      paths:
+      - backend:
+          serviceName: wordpress-svc
+          servicePort: 80
+</pre><p>上記yamlによりIngressリソースを作成する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n431" mdtype="fences">kubectl apply -f wordpress/wordpress-ingress.yaml
+ingress.extensions/wordpress-ingress created
+</pre><h3><a name='header-n432' class='md-header-anchor '></a>Wordpress動作確認</h3><p>ブラウザでIngressに指定したhost(FQDN)宛にアクセスし、以下のような画面が出ればwordpressが動作している。</p><p><img src='./images/wordpress_install.png' alt='wordpress_install' referrerPolicy='no-referrer' /></p><p>Continueをクリックしてwordpressの初期設定を行い、Wordpressバージョンが5.0.3であることを確認する。</p><p><img src='./images/wordpress_v5.png' alt='wordpress_v5' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><hr /><h1><a name='header-n439' class='md-header-anchor '></a>ローリングアップデートによるバージョン変更</h1><p>今回利用した、<code>wordpress.yaml</code>では、<code>spec.strategy.type</code>をRollingUpdateとしており、Wordpressコンテナを<code>wordpress:5.0-php7.1-apache</code>から、<code>5.1.0-php7.1-apache</code>へアップグレードしてみる。</p><h2><a name='header-n441' class='md-header-anchor '></a>コンテナイメージの更新</h2><p>wordpress.yamlで<code>image: wordpress:5.1-php7.1-apache</code>に変更する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="yaml" contenteditable="false" cid="n443" mdtype="fences" style="page-break-inside: unset;">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordpress
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wordpress
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+      - image: wordpress:5.1-php7.1-apache
+        imagePullPolicy: IfNotPresent
+        name: wordpress
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /index.php
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: mysql-svc:3306
+        - name: WORDPRESS_DB_USER
+          value: root
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secrets
+              key: mysql-root-password
+        - name: WORDPRESS_DB_NAME
+          value: wpdb
+        - name: WORDPRESS_TABLE_PREFIX
+          value: wp_
+</pre><h2><a name='header-n444' class='md-header-anchor '></a>アップグレード前の状態確認</h2><p>Replicasetとして<code>wordpress-5458958b9d</code>が作成されており、このReplicasetによって作成された3つのPod<code>wordpress-5458958b9d-75849, wordpress-5458958b9d-9m8r7, wordpress-5458958b9d-bsr9w</code>が起動している。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n446" mdtype="fences">kubectl get pods,rs
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/mysql-7f96fb5df6-f955g       1/1     Running   0          24h
+pod/wordpress-5458958b9d-75849   1/1     Running   0          9m
+pod/wordpress-5458958b9d-9m8r7   1/1     Running   0          9m
+pod/wordpress-5458958b9d-bsr9w   1/1     Running   0          9m
+
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.extensions/mysql-7f96fb5df6       1         1         1       24h
+replicaset.extensions/wordpress-5458958b9d   3         3         3       9m
+</pre><h2><a name='header-n447' class='md-header-anchor '></a>アップグレードの実行</h2><p>修正したYAMLファイルを再度適用する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n449" mdtype="fences">kubectl apply -f wordpress/wordpress.yaml
+deployment.extensions/wordpress configured
+</pre><p>適用後新たなReplicaset<code>wordpress-5d86bdbb87</code>が作成され、新しいコンテナイメージを利用したPodの作成が開始される。<code>spec.strategy.rollingUpdate.maxSurge=1</code>, <code>spec.strategy.rollingUpdate.maxUnavailable=0</code>と指定しているため、1つのPodが追加され常に3つのPodが起動した状態で1Podずつ入れ替えが行われる。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n451" mdtype="fences">kubectl get pods,rs
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/mysql-7f96fb5df6-f955g       1/1     Running   0          24h
+pod/wordpress-5458958b9d-75849   1/1     Running   0          10m
+pod/wordpress-5458958b9d-9m8r7   1/1     Running   0          10m
+pod/wordpress-5458958b9d-bsr9w   1/1     Running   0          10m
+pod/wordpress-5d86bdbb87-vwmm5   0/1     Running   0          24s
+
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.extensions/mysql-7f96fb5df6       1         1         1       24h
+replicaset.extensions/wordpress-5458958b9d   3         3         3       10m
+replicaset.extensions/wordpress-5d86bdbb87   1         1         0       24s
+</pre><p>最終的に新しい、Replicasetにより作成されたPod(<code>wordpress-5d86bdbb87-hqz64, wordpress-5d86bdbb87-sk77j, wordpress-5d86bdbb87-vwmm5</code>)でDeploymentが構成され、アップデートが完了する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n453" mdtype="fences">kubectl get pods,rs
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/mysql-7f96fb5df6-f955g       1/1     Running   0          24h
+pod/wordpress-5d86bdbb87-hqz64   1/1     Running   0          64s
+pod/wordpress-5d86bdbb87-sk77j   1/1     Running   0          44s
+pod/wordpress-5d86bdbb87-vwmm5   1/1     Running   0          88s
+
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.extensions/mysql-7f96fb5df6       1         1         1       24h
+replicaset.extensions/wordpress-5458958b9d   0         0         0       11m
+replicaset.extensions/wordpress-5d86bdbb87   3         3         3       88s
+</pre><h2><a name='header-n454' class='md-header-anchor '></a>Wordpresssアップグレードの確認</h2><p>ブラウザで再接続すると、データベースのアップデートを求められるので、アップデートを実行する。</p><p><img src='./images/update_wordpressdb.png' alt='update_wordpressdb' referrerPolicy='no-referrer' /></p><p>アップデートを終えてバージョンを確認すると、Wordpressのバージョンが5.1に更新される。</p><p><img src='./images/wordpress_v51.png' alt='wordpress_v51' referrerPolicy='no-referrer' /></p><h2><a name='header-n459' class='md-header-anchor '></a>環境の削除</h2><p>これまでに作成したすべてのリソースを削除する。yamlファイルを含むディレクトリを指定した場合、ディレクトリ配下のすべてのyamlファイルのリソースが削除される。一部リソースは削除済みのためエラーが表示されるが無視して良い。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n461" mdtype="fences">kubectl delete -f wordpresss/
+ingress.extensions "wordpress-ingress" deleted
+service "wordpress-svc" deleted
+deployment.extensions "wordpress" deleted
+
+kubectl delete -f mysql
+configmap "mysql-config" deleted
+persistentvolumeclaim "mysql-pvc" deleted
+service "mysql-svc" deleted
+deployment.extensions "mysql" deleted
+secret "mysql-secrets" deleted
+Error from server (NotFound): error when deleting "mysql/mysql-with-configmap.yaml": deployments.extensions "mysql-with-configmap" not found
+Error from server (NotFound): error when deleting "mysql/mysql-with-secret.yaml": deployments.extensions "mysql-with-secret" not found
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n464' class='md-header-anchor '></a>Namespace</h1><p>kubernetesクラスターにはnamespaceという概念があり、同一kubernetesクラスター内を論理的に分離することができる。</p><h2><a name='header-n466' class='md-header-anchor '></a>デフォルトのネームスペース</h2><p>kubernetesにはデフォルトでいくつかのネームスペースが作成されており、明示的に指定しない限り<code>default</code>ネームスペースが利用される。kubernetesのシステムが利用するネームスペースは<code>kube-system</code>などの名前で作成され、ネームスペースを指定しない限りシステムネームスペースのリソースは表示されない。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n468" mdtype="fences" style="page-break-inside: unset;">kubectl apply -f nginx/nginx.yaml
+deployment.extensions/nginx created
+service/nginx created
+
+kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-67bd888d8f-b6x5j   1/1     Running   0          41s
+nginx-67bd888d8f-khtzw   1/1     Running   0          41s
+nginx-67bd888d8f-p85kc   1/1     Running   0          41s
+
+kubectl get pod --all-namespaces
+NAMESPACE         NAME                                       READY   STATUS    RESTARTS   AGE
+default           nginx-67bd888d8f-b6x5j                     1/1     Running   0          21s
+default           nginx-67bd888d8f-khtzw                     1/1     Running   0          21s
+default           nginx-67bd888d8f-p85kc                     1/1     Running   0          21s
+kube-system       coredns-86c58d9df4-9dskt                   1/1     Running   0          27h
+kube-system       coredns-86c58d9df4-dngk2                   1/1     Running   0          27h
+kube-system       default-http-backend-5ff9d456ff-sdnn6      1/1     Running   0          27h
+kube-system       etcd-minikube                              1/1     Running   0          27h
+kube-system       kube-addon-manager-minikube                1/1     Running   0          27h
+kube-system       kube-apiserver-minikube                    1/1     Running   0          27h
+kube-system       kube-controller-manager-minikube           1/1     Running   0          27h
+kube-system       kube-proxy-gpthl                           1/1     Running   0          27h
+kube-system       kube-scheduler-minikube                    1/1     Running   0          27h
+kube-system       kubernetes-dashboard-ccc79bfc9-9ptrx       1/1     Running   0          27h
+kube-system       nginx-ingress-controller-7c66d668b-gvnqd   1/1     Running   0          27h
+kube-system       storage-provisioner                        1/1     Running   0          27h
+storage-gluster   glusterfile-provisioner-59dbfb5478-67mlw   1/1     Running   0          27h
+storage-gluster   glusterfs-mqzf9                            1/1     Running   0          27h
+storage-gluster   heketi-67dbf85b94-xtp2p                    1/1     Running   1          27h
+
+kubectl get ns
+NAME              STATUS   AGE
+default           Active   26h
+kube-public       Active   26h
+kube-system       Active   26h
+storage-gluster   Active   26h
+</pre><h2><a name='header-n469' class='md-header-anchor '></a>Namespaceの作成</h2><p><code>kubectl create ns</code>コマンドでNamespaceを作成することが可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n471" mdtype="fences">kubectl create ns myns1
+namespace/myns created
+
+kubectl get ns
+NAME              STATUS   AGE
+default           Active   26h
+kube-public       Active   26h
+kube-system       Active   26h
+myns              Active   15s
+storage-gluster   Active   26h
+</pre><h2><a name='header-n472' class='md-header-anchor '></a>Namespaceへのリソースの作成</h2><p><code>-n</code>オプションでネームスペースを指定してリソースを作成することが可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n474" mdtype="fences">kubectl apply -n myns -f nginx/nginx.yaml
+deployment.extensions/nginx created
+service/nginx created
+</pre><p>作成したDeploymentは<code>myns</code>ネームスペースに作成される。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n476" mdtype="fences">kubectl get pods -o wide
+NAME                     READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+nginx-67bd888d8f-b6x5j   1/1     Running   0          2m48s   172.17.0.11   minikube   &lt;none&gt;           &lt;none&gt;
+nginx-67bd888d8f-khtzw   1/1     Running   0          2m48s   172.17.0.10   minikube   &lt;none&gt;           &lt;none&gt;
+nginx-67bd888d8f-p85kc   1/1     Running   0          2m48s   172.17.0.9    minikube   &lt;none&gt;           &lt;none&gt;
+
+kubectl get pods -n myns -o wide
+NAME                     READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+nginx-67bd888d8f-5jpvm   1/1     Running   0          81s   172.17.0.12   minikube   &lt;none&gt;           &lt;none&gt;
+nginx-67bd888d8f-8jgwk   1/1     Running   0          81s   172.17.0.13   minikube   &lt;none&gt;           &lt;none&gt;
+nginx-67bd888d8f-xp9cm   1/1     Running   0          81s   172.17.0.14   minikube   &lt;none&gt;           &lt;none&gt;
+</pre><p>各ネームスペースにはそれぞれnginx Serivceが作成されている。これらのServiceはそれぞれ異なるネームスペースに存在するため、クラスター内で異なる名前でアクセスすることが可能。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n478" mdtype="fences">kubectl get svc
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1      &lt;none&gt;        443/TCP   27h
+nginx        ClusterIP   10.103.54.36   &lt;none&gt;        80/TCP    3m31s
+
+kubectl get svc -n myns
+NAME    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+nginx   ClusterIP   10.96.255.184   &lt;none&gt;        80/TCP    2m6s
+</pre><p><code>nginx.default.svc.cluster.local</code>と<code>nginx.myns.svc.cluster.local</code>でアクセス可能。defaultネームスペースのPod内から確認しているため、<code>nginx</code>のみでアクセスすると、自身の存在するネームスペースのnginxが応答する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n480" mdtype="fences" style="page-break-inside: unset;">kubectl get pods
+kuebNAME                     READY   STATUS    RESTARTS   AGE
+nginx-67bd888d8f-b6x5j   1/1     Running   0          4m51s
+nginx-67bd888d8f-khtzw   1/1     Running   0          4m51s
+nginx-67bd888d8f-p85kc   1/1     Running   0          4m51s
+
+kubectl exec -it nginx-67bd888d8f-b6x5j /bin/sh
+/var/www/html # cat /etc/resolv.conf
+nameserver 10.96.0.10
+search default.svc.cluster.local svc.cluster.local cluster.local
+options ndots:5
+
+/var/www/html # curl nginx.default.svc.cluster.local
+nginx-67bd888d8f-khtzw:172.17.0.10:version 1.0
+
+/var/www/html # curl nginx.myns.svc.cluster.local
+nginx-67bd888d8f-8jgwk:172.17.0.13:version 1.0
+
+/var/www/html # curl nginx
+nginx-67bd888d8f-khtzw:172.17.0.10:version 1.0
+
+/var/www/html # exit
+</pre><h2><a name='header-n481' class='md-header-anchor '></a>リソースの削除</h2><p>作成したリソースを削除する。Namespaceも忘れずに削除する。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="bash" contenteditable="false" cid="n483" mdtype="fences">kubectl delete -f nginx/nginx.yaml
+deployment.extensions "nginx" deleted
+service "nginx" deleted
+
+ubectl delete -f nginx/nginx.yaml -n myns
+deployment.extensions "nginx" deleted
+service "nginx" deleted
+
+kubectl delete ns myns
+namespace "myns" deleted
+</pre><p>&nbsp;</p><hr /><h1><a name='header-n486' class='md-header-anchor '></a>OpenShift固有の注意点</h1><ul><li>OpenShift環境では、kubectlを拡張した<code>oc</code>コマンドが利用される。実体は同じバイナリであり、kubectlはocコマンドに対するシンボリックリンクとして設定されている。</li><li>OpenShiftではIngressではなくRouterが利用される。</li><li>デフォルトでProjectによる隔離が行われており、Projectはネームスペースにより実装されている。一般ユーザーは自身が所属するProject(Namespace)を切り替えて、各Project内でのみリソースの作成が可能。</li><li>OpenShiftを試す場合、<a href='https://github.com/minishift/minishift'>minishift</a>を利用することが可能。</li></ul><p>&nbsp;</p></div>
+</body>
+</html>

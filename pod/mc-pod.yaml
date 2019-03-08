@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc-pod
+  labels:
+spec:
+  volumes:
+  - name: shared-logs
+    emptyDir: {}
+  containers:
+  - name: alpine-linux
+    image: alpine:3.9
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do date >> /var/log/app.txt; sleep 5; done"]
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /var/log
+  - name: nginx
+    image: nginx:1-alpine
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /usr/share/nginx/html
