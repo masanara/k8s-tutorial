@@ -27,7 +27,7 @@ spec:
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /index.php
+            path: /license.txt
             port: 80
             scheme: HTTP
           initialDelaySeconds: 15

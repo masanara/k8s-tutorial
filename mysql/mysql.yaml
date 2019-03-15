@@ -38,7 +38,7 @@ spec:
               key: mysql-password
         volumeMounts:
         - name: mysql-pv
-          mountPath: /docker-entrypoint-initdb.d/
+          mountPath: /var/lib/mysql
         - name: config-volume
           mountPath: /etc/mysql/conf.d
       volumes:

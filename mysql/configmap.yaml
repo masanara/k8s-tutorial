@@ -10,5 +10,5 @@ data:
     collation-server=utf8_bin
     default-storage-engine=INNODB
     max_allowed_packet=256M
-    innodb_log_file_size=2GB
+    innodb_log_file_size=10M
     transaction-isolation=READ-COMMITTED

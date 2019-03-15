@@ -662,24 +662,6 @@ curl 192.168.99.100 -H 'Host: nginx.minikube.example'
 <html><body><h1>Docker TEST</h1></body></html
 ```
 
-## 作成したリソースの削除
-
-ここまでで作成したIngress, Deployment, Serviceリソースをすべて削除。 
-
-```shell
-kubectl delete -f nginx/ingress.yaml
-ingress.extensions "nginx" deleted
-
-kubectl delete deploy nginx
-deployment.extensions "nginx" deleted
-
-kubectl delete svc nginx
-service "nginx" deleted
-
-kubectl delete svc nginx-np
-service "nginx-np" deleted
-```
-
 
 
 ---
@@ -751,6 +733,24 @@ Events:
   Warning  Failed     12s   kubelet, minikube  Error: ErrImagePull
   Normal   BackOff    12s   kubelet, minikube  Back-off pulling image "masanara/nginx-php:0.8"
   Warning  Failed     12s   kubelet, minikube  Error: ImagePullBackOff
+```
+
+## 作成したリソースの削除
+
+ここまでで作成したIngress, Deployment, Serviceリソースをすべて削除。 
+
+```shell
+kubectl delete -f nginx/ingress.yaml
+ingress.extensions "nginx" deleted
+
+kubectl delete deploy nginx
+deployment.extensions "nginx" deleted
+
+kubectl delete svc nginx
+service "nginx" deleted
+
+kubectl delete svc nginx-np
+service "nginx-np" deleted
 ```
 
 
@@ -1453,7 +1453,7 @@ data:
     collation-server=utf8_bin
     default-storage-engine=INNODB
     max_allowed_packet=256M
-    innodb_log_file_size=2GB
+    innodb_log_file_size=10M
     transaction-isolation=READ-COMMITTED
 ```
 
@@ -1503,7 +1503,7 @@ spec:
           value: password123
         volumeMounts:
         - name: mysql-pv
-          mountPath: /docker-entrypoint-initdb.d/
+          mountPath: /var/lib/mysql
         - name: config-volume
           mountPath: /etc/mysql/conf.d
       volumes:
@@ -1548,7 +1548,7 @@ character-set-server=utf8
 collation-server=utf8_bin
 default-storage-engine=INNODB
 max_allowed_packet=256M
-innodb_log_file_size=2GB
+innodb_log_file_size=10M
 transaction-isolation=READ-COMMITTED
 root@mysql-with-configmap-69bf686b96-bcw5h:/#
 ```
@@ -1920,7 +1920,7 @@ spec:
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /index.php
+            path: /license.txt
             port: 80
             scheme: HTTP
           initialDelaySeconds: 15
